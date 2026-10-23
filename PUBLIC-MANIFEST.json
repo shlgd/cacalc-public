@@ -1,0 +1,820 @@
+{
+  "version": 1,
+  "files": [
+    {
+      "path": ".editorconfig",
+      "bytes": 219,
+      "sha256": "93e0da8aee50a2c9e0d95a71c7fdedf7d90bd811b57e7aad60ae1102554a30f4"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 46,
+      "sha256": "d137d325877800acaff7252620ad966825cb02fd6d3f75fb9f3d195b6979c39b"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 395,
+      "sha256": "588454f26b8682aedd9657caaa5c4508b270abb14e26632f1501790f5f499f77"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "bytes": 3275,
+      "sha256": "646aa55f660cbe353f2d3d006767c8d429bece187d545e5a97e0173311add5b0"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1062,
+      "sha256": "495843699de23d42bdd6bbd3f4e31b2d88ac90a9553147bf6fa731c251629ee8"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5492,
+      "sha256": "b96b403f19bbaca54625fd761a43b82d6e2a717bfb3253f68fdc4ed22d7de255"
+    },
+    {
+      "path": "SECURITY.md",
+      "bytes": 1720,
+      "sha256": "5cc14b8e7b5735f45f9fbb1d0b7d457557ff459da2ce9253a1be5ff53f3d2180"
+    },
+    {
+      "path": "cacalc/__init__.py",
+      "bytes": 82,
+      "sha256": "ed005d425b2441a0ce2aa93ce7eb18eab48737d60f6f05901ed205d63470b95b"
+    },
+    {
+      "path": "cacalc/__main__.py",
+      "bytes": 3871,
+      "sha256": "0d87b0d33325e3901e9d1f373a1229a2b047d60c00a03227774c1dd72548535b"
+    },
+    {
+      "path": "cacalc/catalog.py",
+      "bytes": 14491,
+      "sha256": "82306e5632050b581be585f4aaae9f57babda4f407ee01761eb4a9cccd7e467a"
+    },
+    {
+      "path": "cacalc/schema.sql",
+      "bytes": 799,
+      "sha256": "23d60da629a3dd8cee1afc6b1daea9c9c52f5b891c7f348ab84fd15506883c62"
+    },
+    {
+      "path": "data/curation/basic-food-names-ru.txt",
+      "bytes": 20642,
+      "sha256": "a6543f77cc614a63290aaba727ec9dd8c06d9632750757a0c9335028230b0a38"
+    },
+    {
+      "path": "docs/architecture.md",
+      "bytes": 4834,
+      "sha256": "111b6de5306db19ff82ab865cd9ee442fe8696cea2649c0cc49ef011a45e26fa"
+    },
+    {
+      "path": "docs/getting-started.md",
+      "bytes": 9109,
+      "sha256": "7f951d656a53279bdd2a766263b0bdb333ef3dd1f9722a30dbe2c981d222edd1"
+    },
+    {
+      "path": "docs/privacy.md",
+      "bytes": 4250,
+      "sha256": "37ebd95369d03ea2ad17f8ab42d1c4f1edefcce03e58b539402c56a718bfcfd6"
+    },
+    {
+      "path": "docs/third-party.md",
+      "bytes": 2424,
+      "sha256": "7c857ebcaa1da3368bd0847cf0f2d43f841a115b897a2eb4581d9b8e00b29845"
+    },
+    {
+      "path": "docs/usage-controls.json",
+      "bytes": 28843,
+      "sha256": "f1086a83bcd6139ff497a14fdc8901671149fd02cdcca848b7ee52a40d26d325"
+    },
+    {
+      "path": "docs/usage.md",
+      "bytes": 5268,
+      "sha256": "947fb2e2c6d299d5da59e87000aa0b0200ddeda6bfb72753478ab58ad34b4f40"
+    },
+    {
+      "path": "ios/Cacalc/BodyMeasurements.swift",
+      "bytes": 2525,
+      "sha256": "6f58cf8db4bd009534dd1a4dc6740dd8bca498ecc92accf35004d5511b116b9d"
+    },
+    {
+      "path": "ios/Cacalc/BodyMeasurementsView.swift",
+      "bytes": 13354,
+      "sha256": "3f8245b479282bd53d8e7fe08035c62a6a18b8b211caea205b883dc38a76686b"
+    },
+    {
+      "path": "ios/Cacalc/Cacalc.entitlements",
+      "bytes": 415,
+      "sha256": "b3a3cfc8bbedc6c773084f5663683ee2561fba1f9274432394a983c600f2e02d"
+    },
+    {
+      "path": "ios/Cacalc/CacalcApp.swift",
+      "bytes": 58619,
+      "sha256": "4bec00bc151eeb3eaac1cb9fe3124bb036f220964674c6d4a1c456c56763397f"
+    },
+    {
+      "path": "ios/Cacalc/Catalog.swift",
+      "bytes": 4734,
+      "sha256": "d9d1d1755ef7507de64da52da812adf0651e377af645de81e9f825bd8b8fa532"
+    },
+    {
+      "path": "ios/Cacalc/DiaryReader.swift",
+      "bytes": 5113,
+      "sha256": "a466103cabeaee38672000ebd0f2091b7d32547c3d20e0abdd04f73c601a2125"
+    },
+    {
+      "path": "ios/Cacalc/Domain.swift",
+      "bytes": 9495,
+      "sha256": "7e3d72fbc4ff4ac5f2e11999675e865b9d42e3390f59937fdf3571139189cd8e"
+    },
+    {
+      "path": "ios/Cacalc/DraftStorage.swift",
+      "bytes": 16415,
+      "sha256": "5942760afd43f67916d0c703fef1d1e6eada085c4862a56ddfe1846bd779239d"
+    },
+    {
+      "path": "ios/Cacalc/FoodCombination.swift",
+      "bytes": 8575,
+      "sha256": "325d0da34bb16a9326de88648c6ef0b546f851229101baa049b719e99c396a74"
+    },
+    {
+      "path": "ios/Cacalc/FoodCombinationView.swift",
+      "bytes": 23608,
+      "sha256": "bf86aba2f23f885fb90191ad2733c70f4fab991375668608577f91704f4d26cd"
+    },
+    {
+      "path": "ios/Cacalc/FoodSheet.swift",
+      "bytes": 13900,
+      "sha256": "54d1698511242fa947412fbda7536070b570dd305f7c79bc02a574c43ac3ad99"
+    },
+    {
+      "path": "ios/Cacalc/HealthArchive.swift",
+      "bytes": 3683,
+      "sha256": "592650ed5d372b3da20d2155691addc2e0e53529a09c21d5821ceb30bf67dfc0"
+    },
+    {
+      "path": "ios/Cacalc/HealthInsights.swift",
+      "bytes": 2566,
+      "sha256": "293b4b972ae3f6573ab451515d553d7ea126aa1d7a020274056307234a2f45e7"
+    },
+    {
+      "path": "ios/Cacalc/HealthSleep.swift",
+      "bytes": 24700,
+      "sha256": "bdc1798cc645189d67098c96b060e886dd4d009de492b77f317918190ed6214e"
+    },
+    {
+      "path": "ios/Cacalc/Info.plist",
+      "bytes": 1465,
+      "sha256": "5aeef4a47fe738c9b0101a9a568691bf5a8f2a2903e816f12cf8edc4eb365bd2"
+    },
+    {
+      "path": "ios/Cacalc/LiveAudioBuffer.swift",
+      "bytes": 1364,
+      "sha256": "b3898815b199fc6abc4ace991da201f1a616e4ddce91926ea356d1456ddb5e08"
+    },
+    {
+      "path": "ios/Cacalc/LiveMealParser.swift",
+      "bytes": 44505,
+      "sha256": "ce72fcef16cd183038000a542e9827b51dd9f90bb5311d94811b26def8cc8483"
+    },
+    {
+      "path": "ios/Cacalc/MealAPI.swift",
+      "bytes": 12104,
+      "sha256": "be26467333f2db1a2b4887c1df69e42591db29fb38c982aacee0a7cfd503848a"
+    },
+    {
+      "path": "ios/Cacalc/MealAnimationProbe.swift",
+      "bytes": 1736,
+      "sha256": "2be5ff032de881171d639ca5a660752ea26bc20d615619cd8cf8fea93279bcea"
+    },
+    {
+      "path": "ios/Cacalc/MealDictationControl.swift",
+      "bytes": 13098,
+      "sha256": "ef568c2db5cbb2a8e709c09c579b54d03632cb89c2a0a6762fa8530fc1c7264c"
+    },
+    {
+      "path": "ios/Cacalc/MealDictationWave.swift",
+      "bytes": 8914,
+      "sha256": "38e335751732ede21115fa53f615dd5abf3da6a52c9f2a3c4535a35b8ba3e3d6"
+    },
+    {
+      "path": "ios/Cacalc/MealDomain.swift",
+      "bytes": 35599,
+      "sha256": "9dffb6b4f71c06fabbe729fb5553c9fa1636eb205972255a5445fd12c2f65400"
+    },
+    {
+      "path": "ios/Cacalc/MealDraftAccessory.swift",
+      "bytes": 5704,
+      "sha256": "a24d88cc2450ab5dd3c10995689f57544df6b8f81a47b857cdb1816a49b45a66"
+    },
+    {
+      "path": "ios/Cacalc/MealEntryView.swift",
+      "bytes": 70736,
+      "sha256": "231b9431943503ae7c199989e3644bbbc83b477571199c6ccbb15a5552b0042e"
+    },
+    {
+      "path": "ios/Cacalc/MealNativeSearch.swift",
+      "bytes": 3146,
+      "sha256": "7363564bd9222b35e09109ffb0684f943aafc292211be0bb4a18bb93a3e3993c"
+    },
+    {
+      "path": "ios/Cacalc/MealNutritionView.swift",
+      "bytes": 3664,
+      "sha256": "62252535210613c41077b4444aed5f0c8bd08c4c42683c9348fdc61f8a9371f9"
+    },
+    {
+      "path": "ios/Cacalc/MealQuickEntry.swift",
+      "bytes": 3406,
+      "sha256": "2a85d1bc27e0c53c234d9f140579ea79105e3da3288242622b080c92788c436c"
+    },
+    {
+      "path": "ios/Cacalc/MealRecordingActivity.swift",
+      "bytes": 4895,
+      "sha256": "22072f1e203c2f79e86ba9e6de398aad65cbccbe8cbe13c8cc63988c58ecb283"
+    },
+    {
+      "path": "ios/Cacalc/MealRepository.swift",
+      "bytes": 21050,
+      "sha256": "69b0f9adae99dce77fed13c1d4e70f8f80ac6185b94c5118f55afeb453626acb"
+    },
+    {
+      "path": "ios/Cacalc/MealScreenNavigation.swift",
+      "bytes": 5665,
+      "sha256": "cfa61402e2873ef58501cbfdeded7d66d1a9e590e86ab2d860744a301b294442"
+    },
+    {
+      "path": "ios/Cacalc/MealSearchNavigationPolicy.swift",
+      "bytes": 4345,
+      "sha256": "fb15158986d4c1a26415946b308db998b19f19e9bc601ea022cb70390133f3e4"
+    },
+    {
+      "path": "ios/Cacalc/MealSession.swift",
+      "bytes": 68400,
+      "sha256": "b57020c4a5a329b34bd4e74c02ab0805a26f0dd733480bfeceb220fe731651ed"
+    },
+    {
+      "path": "ios/Cacalc/MealToolbarFade.swift",
+      "bytes": 8093,
+      "sha256": "31b88080cff6592a17e7b90d22ece418525d0155cc4ac9d318e1099d9aef8d99"
+    },
+    {
+      "path": "ios/Cacalc/Persistence.swift",
+      "bytes": 29835,
+      "sha256": "353aa7a4f80154dfa12b0d31029365d35369bef0caa3f658756811df6784baec"
+    },
+    {
+      "path": "ios/Cacalc/PreparedFood.swift",
+      "bytes": 24781,
+      "sha256": "04a987371f5eb2b9731512c7f19dbe27ccb6d3f5a39b2e30633fdd4de4d4a9cb"
+    },
+    {
+      "path": "ios/Cacalc/PreparedFoodView.swift",
+      "bytes": 39918,
+      "sha256": "6db62ab4f3ab45935aedcdba9639d28b767e48c88e4ac1b6b2d4c1fe1dee1afb"
+    },
+    {
+      "path": "ios/Cacalc/ProcessMemory.swift",
+      "bytes": 905,
+      "sha256": "537d35d9e4a59c4d7fac9b90c6b10672c2b168e4cccb6508ffc9449dfd59e8cf"
+    },
+    {
+      "path": "ios/Cacalc/ProductCreation.swift",
+      "bytes": 7036,
+      "sha256": "2bbc5053adf5b1a4665d93a5a9f5b66ed5125724942a0598ba55711b543fbebb"
+    },
+    {
+      "path": "ios/Cacalc/ProductEditor.swift",
+      "bytes": 20488,
+      "sha256": "2ba063f9f6d010fbbc81d9de561b384806929cc339b587dbd098948379589f5f"
+    },
+    {
+      "path": "ios/Cacalc/ProductRepository.swift",
+      "bytes": 20265,
+      "sha256": "eda132a444ee23332a7e73c61f986f7072fbe6e609e1615f00397dbff977475c"
+    },
+    {
+      "path": "ios/Cacalc/ProductSearch.swift",
+      "bytes": 19622,
+      "sha256": "c6d6280c0d78095b2311ec1bb305ec501a7842000c9a78dde0deb93a913979e4"
+    },
+    {
+      "path": "ios/Cacalc/ProductsView.swift",
+      "bytes": 6824,
+      "sha256": "9115352c19b6d5febec9b7259f56ebf2a7d115a9cb8ab969b2a18d0e48eae127"
+    },
+    {
+      "path": "ios/Cacalc/ProfileView.swift",
+      "bytes": 11403,
+      "sha256": "87623e0ad97483475125ee0c5d888bf83eb70430d70112d6c1606990335009a2"
+    },
+    {
+      "path": "ios/Cacalc/RussianLabelParser.swift",
+      "bytes": 25113,
+      "sha256": "fc95cf29213db08f459e784216dea77440d6ce68275388115537dcda5d878a37"
+    },
+    {
+      "path": "ios/Cacalc/Scanner.swift",
+      "bytes": 4792,
+      "sha256": "7e54ac819952009d7407bd0e7118258a3334e0c07acb8eb8829dec323c659c01"
+    },
+    {
+      "path": "ios/Cacalc/SearchStartupProbe.swift",
+      "bytes": 2227,
+      "sha256": "861063987e2c629192372ed9e04176a511bafc1043f0e4f20896c933d324adae"
+    },
+    {
+      "path": "ios/Cacalc/SemanticProductSearch.swift",
+      "bytes": 11411,
+      "sha256": "ed397533bd74255d98dc64a630f961fc4a97907c77db4f4e0a706b8f63c8a6ee"
+    },
+    {
+      "path": "ios/Cacalc/StorageUsageProbe.swift",
+      "bytes": 21621,
+      "sha256": "81fd8c0aa64aafdf9339a49dfa56d168fa8fbe7f2304f73e18d7fda2588d894b"
+    },
+    {
+      "path": "ios/Cacalc/UsageJournal.swift",
+      "bytes": 11280,
+      "sha256": "2b71ef22d7910a639b759d91194637c24e65be8d6f9cd8ba1fe4bac195d0a6d5"
+    },
+    {
+      "path": "ios/Cacalc/UsageTelemetry.swift",
+      "bytes": 6426,
+      "sha256": "56f5b4e7809ef3369e03b12a7780bd1e4b93f05933d9b95e78f770fef723d030"
+    },
+    {
+      "path": "ios/Cacalc/VoiceAssets.swift",
+      "bytes": 11956,
+      "sha256": "7eea906f4dfea8e60a0a0e2490ab7ad1f439deeccd1e471b92be2ca5f7bb5620"
+    },
+    {
+      "path": "ios/Cacalc/VoiceAudioSession.swift",
+      "bytes": 2168,
+      "sha256": "eee980dbf5a6152ecf9464bccac48684329ddb1964fa2e34226d7dc6cb457b5b"
+    },
+    {
+      "path": "ios/Cacalc/VoiceEngine.swift",
+      "bytes": 9219,
+      "sha256": "0f8b878cdcbd85074011470acfdbf054c0524a331fc7936fb020d0a6fa586cbc"
+    },
+    {
+      "path": "ios/Cacalc/VoiceLanguageModel.swift",
+      "bytes": 4286,
+      "sha256": "06c9ec7b71c67e604dfc336e2fcdc389623a2f3ff161f816bae2030c667a4766"
+    },
+    {
+      "path": "ios/Cacalc/VoicePromptCache.swift",
+      "bytes": 4942,
+      "sha256": "f65c42b1806de8be1a19c65b36cb2003ee9e6c8e97e08a3376c5e9abfab56258"
+    },
+    {
+      "path": "ios/Cacalc/VoiceSession.swift",
+      "bytes": 37504,
+      "sha256": "8d6e716dd492c946ade7f3d83534a84c91b1cef96e38ef8267f9fc89459164d9"
+    },
+    {
+      "path": "ios/CacalcTests/CacalcTests.swift",
+      "bytes": 9660,
+      "sha256": "80fb7efd17c527840b0521a1dccd91a881b289f49cce4a285e16cca9dabea2a3"
+    },
+    {
+      "path": "ios/CacalcTests/LabelParserTests.swift",
+      "bytes": 5960,
+      "sha256": "8895d5987a2e0c2a5bc8db8d365a2ad34945d50992412010d652e0dcbeaed83c"
+    },
+    {
+      "path": "ios/CacalcTests/MealJournalTests.swift",
+      "bytes": 16873,
+      "sha256": "69355f08501c0c39d59e60ae72e5475247c0f182ac835fb3aab573efb423e62f"
+    },
+    {
+      "path": "ios/CacalcTests/VoiceModelTests.swift",
+      "bytes": 10775,
+      "sha256": "6baa8429bed2cf9f86bc9f874b6522fabef56453bf585a4b6444cce632d5ddc1"
+    },
+    {
+      "path": "ios/CacalcTests/VoiceProductTests.swift",
+      "bytes": 18904,
+      "sha256": "537e9f0799c576e4175ea718d3bea95875c4eeffdb3bc893f36f5188908044a2"
+    },
+    {
+      "path": "ios/CacalcUITests/CacalcUITests.swift",
+      "bytes": 18085,
+      "sha256": "6a61121d6ce8a8b4d75bb7c83524611be0d7ef1887a0e6319c16f84341a03dd9"
+    },
+    {
+      "path": "ios/CacalcUITests/MealJournalUITests.swift",
+      "bytes": 1888,
+      "sha256": "fcaa9b7cdc56e8b7c999ee07bbb3e37eafee778a1ef2ef291f5551e20bf93212"
+    },
+    {
+      "path": "ios/RecordingActivity/Info.plist",
+      "bytes": 1044,
+      "sha256": "f4628ce8f86ccec2849c314a98ebf242cee62afee43a86bf99ce81883d13e6c1"
+    },
+    {
+      "path": "ios/RecordingActivity/RecordingActivity.entitlements",
+      "bytes": 364,
+      "sha256": "163ef59b5cab2cdaf0a7856175fc28b7076c5b38144a688bfd33394267459b28"
+    },
+    {
+      "path": "ios/RecordingActivity/RecordingWidget.swift",
+      "bytes": 15729,
+      "sha256": "84ef8f1b555611e2cabf88bef010ae863b66078d8b4a0b625c338c0bf84c7dbb"
+    },
+    {
+      "path": "ios/RecordingShared/CalorieRingGraphic.swift",
+      "bytes": 1835,
+      "sha256": "d80f80480af25e633f3601bf4dd64271f1744c237b75775ede973db883ed9981"
+    },
+    {
+      "path": "ios/RecordingShared/NutritionWidgetSnapshot.swift",
+      "bytes": 4970,
+      "sha256": "d635367db89e937e632a73bf87c1d20055655d21c8f7b483d0b0ed71e64e6774"
+    },
+    {
+      "path": "ios/RecordingShared/RecordingActivityAttributes.swift",
+      "bytes": 227,
+      "sha256": "8382b09f2a77433e722bf3eb217b164988e13e6d6e9d1539be4dcaa58f407da0"
+    },
+    {
+      "path": "ios/RecordingShared/RecordingIntents.swift",
+      "bytes": 1175,
+      "sha256": "e6a2e96555c9cc5cdd16b111239ea1016e2217744c5d1e1b8f9144ebfe400b0a"
+    },
+    {
+      "path": "ios/Resources/Assets.xcassets/AppIcon.appiconset/AppIcon.png",
+      "bytes": 13883,
+      "sha256": "21732f7fb04677779d5167292f05a21ca0343c320fe98ac86456f7bea9e224cc"
+    },
+    {
+      "path": "ios/Resources/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "bytes": 134,
+      "sha256": "6ad2c5c3bbcf972c7f02d217d6afcac3f24a10e30510c7e2d06c582371ed9d22"
+    },
+    {
+      "path": "ios/Resources/Assets.xcassets/Contents.json",
+      "bytes": 40,
+      "sha256": "10e3b5dc202f1cd9fad1f688c8fc9fe9e9669bf3f8295e67d216b10fd99b6f49"
+    },
+    {
+      "path": "ios/Resources/ThirdPartyNotices.txt",
+      "bytes": 118981,
+      "sha256": "18f42ca3ef20bab9aca6dbc8e17d85b1ed19091eac5080f27043510b5b8492d8"
+    },
+    {
+      "path": "ios/Resources/catalog.manifest.json",
+      "bytes": 659,
+      "sha256": "17fbea0b2dee1b010206c2d88131f8b2e597c03800d837ff924efeedf3d98c79"
+    },
+    {
+      "path": "ios/Resources/product-extraction-prompt.txt",
+      "bytes": 4375,
+      "sha256": "0d2eed6295784107ed8c2bbdcabd46d930cdc9f636b3539ed8b718987e5fcc5d"
+    },
+    {
+      "path": "ios/Resources/product-extraction-schema.json",
+      "bytes": 727,
+      "sha256": "87b5b87dd5c2af177e8676c723c36359a3100be682dc5c25eed2bd78342d6eb5"
+    },
+    {
+      "path": "ios/Resources/voice-models.json",
+      "bytes": 6325,
+      "sha256": "16917ef951353fc700043beec6fcd787da81fe4571f6dc5992559020f4815c85"
+    },
+    {
+      "path": "ios/project.yml",
+      "bytes": 7043,
+      "sha256": "b559f667dca51f8ff1fe1d211c3e8bac7e39b5944040d99aa4239902059b4a5a"
+    },
+    {
+      "path": "tests/fixtures/README.md",
+      "bytes": 1068,
+      "sha256": "a1eaf499afda8ca8a40bbee37cf49910ba48cad1b334b4524da3e869a785ac9c"
+    },
+    {
+      "path": "tests/fixtures/luna-meal-extraction-minimal-v1.json",
+      "bytes": 7640,
+      "sha256": "3aca8ffec1c4928960ccc10e762c68ed32e457959fa04235dd952ec5fafa9b96"
+    },
+    {
+      "path": "tests/fixtures/luna-meal-extraction-v1.json",
+      "bytes": 22351,
+      "sha256": "4c9f7782f9fd2bbd23554e9eb5793408f6bd8e4e2f2ca1dae8b266c3e1a041c8"
+    },
+    {
+      "path": "tests/fixtures/luna-meal-extraction-v2.json",
+      "bytes": 6990,
+      "sha256": "672ed6af313c9518825487b62460dea316d2f6b135b519a2bbb8a16c37f4981c"
+    },
+    {
+      "path": "tests/fixtures/meal-compact-20260914.json",
+      "bytes": 3627,
+      "sha256": "3d79590fc38637d45747e77b8bedd39f5b0260500356ab141b61039b9718361b"
+    },
+    {
+      "path": "tests/fixtures/meal-descriptions-20260914.json",
+      "bytes": 3077,
+      "sha256": "1cb0f5ab13ec0e21fcae5c7a1bbf6550aafcae3815c8508f189c9f9ee9d84103"
+    },
+    {
+      "path": "tests/fixtures/meal-entities-holdout-v2.json",
+      "bytes": 11798,
+      "sha256": "a2c51bdb2e99e0c60c8fc955ba631395bbc4e90d4a25852c52350441d7b9e5bc"
+    },
+    {
+      "path": "tests/fixtures/meal-entities-holdout-v3.json",
+      "bytes": 12025,
+      "sha256": "449f93c7d7ca87696295d7fc16779cec5d7e54ac927a31daa80500e80d3d8cc1"
+    },
+    {
+      "path": "tests/fixtures/meal-entities.json",
+      "bytes": 5727,
+      "sha256": "1f15ccf0320064715ac808395087f28009d5605311eef2f2b5a89520d49f7ad4"
+    },
+    {
+      "path": "tests/fixtures/meal-pairs-holdout-v1.json",
+      "bytes": 10199,
+      "sha256": "312f20f12de088c211cb6fda86ad5b2e33611676612563c4554db06b94a1137b"
+    },
+    {
+      "path": "tests/fixtures/meal-prompt-20260914.json",
+      "bytes": 7048,
+      "sha256": "dc8bc2614c3e1798835474bc5e72ee8f479d89ecf4d7a9f8b84c122587fe8ddb"
+    },
+    {
+      "path": "tests/fixtures/meal-tagger-check-v1.json",
+      "bytes": 7637,
+      "sha256": "2931f8db236f4d81190a9809f2b58c0be2843ff3b38c6905c032857da363e372"
+    },
+    {
+      "path": "tests/fixtures/off-demo.tsv",
+      "bytes": 540,
+      "sha256": "95ab3dd726f7e609f2cfa9a432c74f8ffd632dbf92ea654ee7e89b9b917dfa77"
+    },
+    {
+      "path": "tests/fixtures/voice-brands.json",
+      "bytes": 3338,
+      "sha256": "85cda40a7b6aad403fbadd5565497ffb3a972ac819317017567a63f272757457"
+    },
+    {
+      "path": "tests/fixtures/voice-label-rules.json",
+      "bytes": 10435,
+      "sha256": "2c56f4f81bf768c84745136dccf62d0ab36dea0c20d1946e2f4d28075515968d"
+    },
+    {
+      "path": "tests/fixtures/voice-language.json",
+      "bytes": 6990,
+      "sha256": "e383c85e72fc11c95e34bf1e5e7246c70c0c783161c5be9e51114ccd68958471"
+    },
+    {
+      "path": "tests/fixtures/voice-product-fields-prompt.txt",
+      "bytes": 2519,
+      "sha256": "38ef19cc7cd6221ecc7bc6af96938b31b5645c4aedd1cbeb4f7a0f1e63013cd3"
+    },
+    {
+      "path": "tests/test_catalog.py",
+      "bytes": 10992,
+      "sha256": "4da8362a57f650aa6fedac6ef00a5ae91d3fa4cf09e7aa8b0beacba9380e9cfb"
+    },
+    {
+      "path": "tests/test_ios_catalog.py",
+      "bytes": 3469,
+      "sha256": "ffb3cc4dff3eb0fbf484e6c55a7e2ed2de6d7d509624a3c571f73743d288e1ac"
+    },
+    {
+      "path": "tests/test_meal_span_linker.py",
+      "bytes": 6948,
+      "sha256": "e1074627d038bfb6142ab6b86fafccf07c47fd9de923b05e6dfabb84755c7434"
+    },
+    {
+      "path": "tests/test_meal_text_chunker.py",
+      "bytes": 5873,
+      "sha256": "4930871372486564ba25f83df2f4b315be8e2ce21eb3fa5ebdebe7b50a5ecaa4"
+    },
+    {
+      "path": "tests/test_off_audit.py",
+      "bytes": 2796,
+      "sha256": "56c2aa5b811aa947d3dd01d53e62c830b59eadddf609ebad6a265ca6460e5dc5"
+    },
+    {
+      "path": "tools/LabelParserBench/LabelParserBench.swift",
+      "bytes": 2978,
+      "sha256": "1b54493ffd9aa224e796c81f30d9ca50c4039e79669c21b52763734dc01c9d30"
+    },
+    {
+      "path": "tools/MealPipelineBench/AuditFixChecks.swift",
+      "bytes": 14843,
+      "sha256": "ba5dd5742ec2dad0e60583752e7438c286e3214142ab03bdfe293a9257244de1"
+    },
+    {
+      "path": "tools/MealPipelineBench/AuditPerformanceChecks.swift",
+      "bytes": 13459,
+      "sha256": "1456f6de3774b0bdf4c7d772f262a3618ea99f0fb657b5874f4b6d626f15e87a"
+    },
+    {
+      "path": "tools/MealPipelineBench/CombinationChecks.swift",
+      "bytes": 8704,
+      "sha256": "1a8625a58af41896152958e79bf9fd38ac600b63c25d89060018ee7372977df6"
+    },
+    {
+      "path": "tools/MealPipelineBench/LegacySearchIndex.swift",
+      "bytes": 5796,
+      "sha256": "94df0847519d73d67731cd0a743807433c86cb8f775ae887846a0efc8817393c"
+    },
+    {
+      "path": "tools/MealPipelineBench/MealPipelineBench.swift",
+      "bytes": 126609,
+      "sha256": "ddbc3adeae494fe931e948bdec4e95a5ad847879016362850b03d19680db3122"
+    },
+    {
+      "path": "tools/MealPipelineBench/MealTimeCorrection.swift",
+      "bytes": 2126,
+      "sha256": "a7f26478d2b7237393723cee704f653533cd449b01c154be65d1d63aff906e03"
+    },
+    {
+      "path": "tools/MealPipelineBench/MemoryProbe.swift",
+      "bytes": 2289,
+      "sha256": "cae7f19a9c282f82a36275908d6a3d4295f4a51fdc772894ad510c1123011945"
+    },
+    {
+      "path": "tools/MealPipelineBench/PlannerChecks.swift",
+      "bytes": 41820,
+      "sha256": "d21c9b3e22683c8aba77a52707e0f2cf12551b948fb0e0c9422d643d81a30fb6"
+    },
+    {
+      "path": "tools/MealPipelineBench/PreparedFoodChecks.swift",
+      "bytes": 19483,
+      "sha256": "73289355cf7543c7b42189a2715b172b298aa1c7d5c16559accff4ffc8c03a93"
+    },
+    {
+      "path": "tools/MealPipelineBench/SelectionChecks.swift",
+      "bytes": 2580,
+      "sha256": "e5582971697583ce5d2e913ce3d7a6482b7d06e0c9dec5a4738ca29556075f24"
+    },
+    {
+      "path": "tools/ModelBench/ModelBench.swift",
+      "bytes": 4510,
+      "sha256": "09a45c0f6721fc56bc665804dc827d4ef24d2d7a176b169f27f53d3cd50cd014"
+    },
+    {
+      "path": "tools/NutritionWidgetChecks.swift",
+      "bytes": 3557,
+      "sha256": "5d11c3fe14f00bafd90a5a5758c55e5c2dfb408352b4c3577348b2d5a5a67e5d"
+    },
+    {
+      "path": "tools/SearchBench/evaluate_embedding_runtime.py",
+      "bytes": 6503,
+      "sha256": "35c8b4314783c0ade4ed8ec8725bb0baed5f1c234919cf23b96e802b0e6362b6"
+    },
+    {
+      "path": "tools/SearchBench/prepare_e5.py",
+      "bytes": 4174,
+      "sha256": "cf872c3c41ded006df15f596f9bd23bd2ef8e7640424f1348892deb091942c40"
+    },
+    {
+      "path": "tools/StorageMaintenanceBench/main.swift",
+      "bytes": 7304,
+      "sha256": "be610f536b2798a06d4dd2104c4b8c14fe5562c96fe2d32d0daa421ca1f0fc2b"
+    },
+    {
+      "path": "tools/StorageUsageBench/main.swift",
+      "bytes": 3501,
+      "sha256": "671de83f178b3b70035ec340fdf431875c874257491c91e870777d83c1d1dfdb"
+    },
+    {
+      "path": "tools/StreamingBench/StreamingBench.swift",
+      "bytes": 5305,
+      "sha256": "6fb746ec1f8e96f17e3e435b68c3bf76a1ea5b15f01053f45c6da8e78725f403"
+    },
+    {
+      "path": "tools/UsageTelemetryBench/main.swift",
+      "bytes": 3220,
+      "sha256": "dfbd8f46c7a85fe947b992da8a3a4db43a0ca66e9becd030cdd275897b903c00"
+    },
+    {
+      "path": "tools/VoiceBench/VoiceBench.swift",
+      "bytes": 6568,
+      "sha256": "7776815217270a85240e5c1d8ef0b9d9c43fbca7d67d4333818fb06fd3036483"
+    },
+    {
+      "path": "tools/audit_off.py",
+      "bytes": 12217,
+      "sha256": "a4cd87aab615d76c89025979bb2b90070473a56d3c0cf54270a3a353c7b24d57"
+    },
+    {
+      "path": "tools/build_basic_catalog.py",
+      "bytes": 6673,
+      "sha256": "6bc91760def835a050034a00450509508aa3e930da294ce784992fe929796138"
+    },
+    {
+      "path": "tools/check_basic_catalog.py",
+      "bytes": 2101,
+      "sha256": "954cc77802f5b2e82456ece5ae86c163fb7a1333c09edb763c7460cfec8cf8ef"
+    },
+    {
+      "path": "tools/check_label_parser.sh",
+      "bytes": 606,
+      "sha256": "198aba4ce0b6d36354cefc5122a8a275169b4abe45f9e497803a81486a9c1170"
+    },
+    {
+      "path": "tools/check_meal_pairs.sh",
+      "bytes": 1942,
+      "sha256": "1df75e470d535531460927c2f97a65e4fd0fea3f502d5f8ae6103eccfef11a39"
+    },
+    {
+      "path": "tools/check_meal_pipeline.sh",
+      "bytes": 2029,
+      "sha256": "af2b3ddd330bc800b6a0b60bc6f8d96780916a64bfc949f2892628df44de5fa5"
+    },
+    {
+      "path": "tools/check_nutrition_widget.sh",
+      "bytes": 415,
+      "sha256": "0646f6153a195d20527ec27a826c75b1539e1fee40ca30cedbc584da0ee3f767"
+    },
+    {
+      "path": "tools/check_public_release.py",
+      "bytes": 3136,
+      "sha256": "0dc9230267c36f5b09d8fa35b195ca252dc7e28c06e438c686aacdad9b3f453f"
+    },
+    {
+      "path": "tools/check_storage_maintenance.sh",
+      "bytes": 1498,
+      "sha256": "7e4b916a495c0b0cb7a8b4cc42dfc4f878f49584da6b44e4e1346f1ed49f4d2a"
+    },
+    {
+      "path": "tools/check_storage_usage_probe.sh",
+      "bytes": 375,
+      "sha256": "7bc96d9f6666526f1d10db4bf552514c0e8f51b35c6175318ae6921d2e1fbb7e"
+    },
+    {
+      "path": "tools/check_usage_coverage.py",
+      "bytes": 948,
+      "sha256": "a23c63cb58a1cc2ff53a55927443640af89c727b45bdee69647d4df635ec6c84"
+    },
+    {
+      "path": "tools/check_usage_telemetry.sh",
+      "bytes": 374,
+      "sha256": "eaea340ee5dab4d3641daceab60d59ee823785e4b777fdbf5131340abd31406b"
+    },
+    {
+      "path": "tools/check_voice_verification.sh",
+      "bytes": 3506,
+      "sha256": "1ca3081e1b9935b40963f3e1c70ed96c6c58e469285dac03ebce8fcd72cb049f"
+    },
+    {
+      "path": "tools/compare_audit_memory.py",
+      "bytes": 2738,
+      "sha256": "bc3303678136d15566ed1194617f2be9566d09ac4303ce57b01c5500ed142a8e"
+    },
+    {
+      "path": "tools/download_voice_models.py",
+      "bytes": 1871,
+      "sha256": "fb42e5e12a09a762eb020b168ece3fa03b728db991c548f3904dc0967887084c"
+    },
+    {
+      "path": "tools/extract_off_csv.py",
+      "bytes": 3107,
+      "sha256": "f24c655198a4b20bd785756ea19a103cc2e18ac02cea72c8501c008cd311b786"
+    },
+    {
+      "path": "tools/generate_meal_pair_cases.py",
+      "bytes": 3934,
+      "sha256": "090923b23a66da21d16295125895b28152a44ecc184ec863189cee37966ed525"
+    },
+    {
+      "path": "tools/meal_span_linker.py",
+      "bytes": 9937,
+      "sha256": "ddbecf3d62186aa9f9ed7667b72475515fd077a2bf4b3b6fa84f79cd8c099818"
+    },
+    {
+      "path": "tools/meal_text_chunker.py",
+      "bytes": 6877,
+      "sha256": "0e6307c7cfd42f14adb474cfa5adcba7cb3907d510c4c7321ef6ee613052721e"
+    },
+    {
+      "path": "tools/prepare_ios_catalog.py",
+      "bytes": 4692,
+      "sha256": "98f5fd4163a8f380929eb2014239625e09f2dd88b5c7159e9973c00c0cd6a6ac"
+    },
+    {
+      "path": "tools/summarize_matching.py",
+      "bytes": 2386,
+      "sha256": "08bc74613d1a75c045b255261204f9e9d83d3c536c5e37071da87de05930c803"
+    },
+    {
+      "path": "tools/summarize_usage.py",
+      "bytes": 3781,
+      "sha256": "e11e95c74324a63ac8dbccfe7a49b4dd918f2630b62fa5ece0088d180a40bac9"
+    },
+    {
+      "path": "tools/test_legacy_log_tools.py",
+      "bytes": 3819,
+      "sha256": "5ebe2bda59c65ca8ca7382ba15304800ec726b9cbcafec5ecccea49315a7d44c"
+    },
+    {
+      "path": "tools/verify_legacy_log_archive.py",
+      "bytes": 2667,
+      "sha256": "4c1eac02603161037ad599b1ea7ccbe09dd2502a878f064635749dc1f761f10f"
+    }
+  ]
+}

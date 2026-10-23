@@ -1,0 +1,837 @@
+[
+  {
+    "id": "Prepared.discard.request",
+    "file": "ios/Cacalc/PreparedFoodView.swift",
+    "source": "Выбросить: подтверждение"
+  },
+  {
+    "id": "Prepared.discard.spoiled",
+    "file": "ios/Cacalc/PreparedFoodView.swift",
+    "source": "Списать: испортилось"
+  },
+  {
+    "id": "Prepared.discard.other",
+    "file": "ios/Cacalc/PreparedFoodView.swift",
+    "source": "Списать: другая причина"
+  },
+  {
+    "id": "Prepared.discard.cancel",
+    "file": "ios/Cacalc/PreparedFoodView.swift",
+    "source": "Отмена списания"
+  },
+  {
+    "id": "Prepared.discard.errorDismiss",
+    "file": "ios/Cacalc/PreparedFoodView.swift",
+    "source": "Закрыть ошибку списания"
+  },
+  {
+    "id": "MealEntryView.button.86",
+    "file": "ios/Cacalc/MealEntryView.swift",
+    "source": "Button { add(product) } label: {"
+  },
+  {
+    "id": "MealEntryView.button.98",
+    "file": "ios/Cacalc/MealEntryView.swift",
+    "source": "Button(\"Добавить «\\(query)»\") { add(name: query.trimmingCharacters(in: .whitespacesAndNewlines)) }"
+  },
+  {
+    "id": "MealEntryView.button.107",
+    "file": "ios/Cacalc/MealEntryView.swift",
+    "source": "Button(\"Повторить сохранение архива\") {"
+  },
+  {
+    "id": "MealEntryView.button.145",
+    "file": "ios/Cacalc/MealEntryView.swift",
+    "source": "Button(\"Удалить\", systemImage: \"trash\", role: .destructive) { meal.removeRows([item.id]) }"
+  },
+  {
+    "id": "MealEntryView.button.174",
+    "file": "ios/Cacalc/MealEntryView.swift",
+    "source": "Button(draft.pendingResponse != nil ? \"Применить полученный ответ\" : \"Повторить обработку диктовки\") {"
+  },
+  {
+    "id": "MealEntryView.button.180",
+    "file": "ios/Cacalc/MealEntryView.swift",
+    "source": "Button(\"Ответ модели · временная диагностика\") { showingModelResponse = true }"
+  },
+  {
+    "id": "MealEntryView.button.184",
+    "file": "ios/Cacalc/MealEntryView.swift",
+    "source": "Button(\"Удалить запись\", role: .destructive) { Task { await meal.removeEntry() } }"
+  },
+  {
+    "id": "MealEntryView.button.276",
+    "file": "ios/Cacalc/MealEntryView.swift",
+    "source": "Button {"
+  },
+  {
+    "id": "MealEntryView.button.296",
+    "file": "ios/Cacalc/MealEntryView.swift",
+    "source": "Button { setSearchPresented(false); Task { await meal.commit() } } label: {"
+  },
+  {
+    "id": "MealEntryView.button.311",
+    "file": "ios/Cacalc/MealEntryView.swift",
+    "source": "Button { scanner = true } label: {"
+  },
+  {
+    "id": "MealEntryView.button.412",
+    "file": "ios/Cacalc/MealEntryView.swift",
+    "source": "Button(\"Готово\") { showingModelResponse = false }"
+  },
+  {
+    "id": "MealEntryView.button.428",
+    "file": "ios/Cacalc/MealEntryView.swift",
+    "source": "Button(\"Скачать модель\") { voice.needsModels = false; voice.prepareMeal(meal) }"
+  },
+  {
+    "id": "MealEntryView.button.436",
+    "file": "ios/Cacalc/MealEntryView.swift",
+    "source": "Button(\"Повторить распознавание\") { voice.error = nil; voice.transcribeMeal(meal) }"
+  },
+  {
+    "id": "MealEntryView.button.439",
+    "file": "ios/Cacalc/MealEntryView.swift",
+    "source": "Button(meal.draft?.liveMode == true ? \"Повторить распознавание\" : \"Повторить запрос\") {"
+  },
+  {
+    "id": "MealEntryView.button.444",
+    "file": "ios/Cacalc/MealEntryView.swift",
+    "source": "Button(\"Понятно\", role: .cancel) { meal.error = nil; voice.error = nil }"
+  },
+  {
+    "id": "MealEntryView.button.510",
+    "file": "ios/Cacalc/MealEntryView.swift",
+    "source": "Button(action: choose) {"
+  },
+  {
+    "id": "MealEntryView.button.551",
+    "file": "ios/Cacalc/MealEntryView.swift",
+    "source": "Button { focusedWeight.wrappedValue = row.id } label: {"
+  },
+  {
+    "id": "MealEntryView.button.684",
+    "file": "ios/Cacalc/MealEntryView.swift",
+    "source": "Button { meal.choose(option.product, for: rowID); dismiss() } label: {"
+  },
+  {
+    "id": "MealEntryView.button.693",
+    "file": "ios/Cacalc/MealEntryView.swift",
+    "source": "Button { meal.choose(product, for: rowID); dismiss() } label: { candidateLabel(product) }"
+  },
+  {
+    "id": "MealEntryView.button.699",
+    "file": "ios/Cacalc/MealEntryView.swift",
+    "source": "Button {"
+  },
+  {
+    "id": "MealEntryView.button.713",
+    "file": "ios/Cacalc/MealEntryView.swift",
+    "source": "Button(\"Поиск\", systemImage: \"magnifyingglass\") { showingSearch = true; focused = .search }"
+  },
+  {
+    "id": "MealEntryView.button.715",
+    "file": "ios/Cacalc/MealEntryView.swift",
+    "source": "Button(\"Готово\") { dismiss() } }"
+  },
+  {
+    "id": "MealEntryView.button.716",
+    "file": "ios/Cacalc/MealEntryView.swift",
+    "source": "Button(\"Готово\") { focused = nil } }"
+  },
+  {
+    "id": "MealEntryView.button.726",
+    "file": "ios/Cacalc/MealEntryView.swift",
+    "source": "Button(\"Понятно\", role: .cancel) { meal.error = nil }"
+  },
+  {
+    "id": "MealEntryView.button.787",
+    "file": "ios/Cacalc/MealEntryView.swift",
+    "source": "Button(\"Убрать привязку\") { meal.choose(nil, for: rowID) }"
+  },
+  {
+    "id": "MealEntryView.button.800",
+    "file": "ios/Cacalc/MealEntryView.swift",
+    "source": "Button(row.product == nil ? \"Создать карточку\" : \"Дополнить карточку\") {"
+  },
+  {
+    "id": "MealEntryView.button.807",
+    "file": "ios/Cacalc/MealEntryView.swift",
+    "source": "Button { meal.choose(option.product, for: rowID) } label: {"
+  },
+  {
+    "id": "MealEntryView.button.816",
+    "file": "ios/Cacalc/MealEntryView.swift",
+    "source": "Button { meal.choose(product, for: rowID); query = \"\"; found = [] } label: {"
+  },
+  {
+    "id": "MealEntryView.button.833",
+    "file": "ios/Cacalc/MealEntryView.swift",
+    "source": "Button(\"Готово\") { UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil) }"
+  },
+  {
+    "id": "MealEntryView.button.849",
+    "file": "ios/Cacalc/MealEntryView.swift",
+    "source": "Button(\"Сохранить ключ\") {"
+  },
+  {
+    "id": "MealEntryView.button.854",
+    "file": "ios/Cacalc/MealEntryView.swift",
+    "source": "Button(\"Удалить ключ\", role: .destructive) {"
+  },
+  {
+    "id": "ProfileView.button.20",
+    "file": "ios/Cacalc/ProfileView.swift",
+    "source": "Button(saved ? \"Цели сохранены\" : \"Сохранить цели\") {"
+  },
+  {
+    "id": "ProfileView.button.57",
+    "file": "ios/Cacalc/ProfileView.swift",
+    "source": "Button(\"Готово\") { hideKeyboard() }.accessibilityIdentifier(\"dismissKeyboard\")"
+  },
+  {
+    "id": "MealDraftAccessory.button.25",
+    "file": "ios/Cacalc/MealDraftAccessory.swift",
+    "source": "Button { meal.showing = true } label: {"
+  },
+  {
+    "id": "MealDraftAccessory.button.32",
+    "file": "ios/Cacalc/MealDraftAccessory.swift",
+    "source": "Button { Task { await meal.commit() } } label: {"
+  },
+  {
+    "id": "MealDraftAccessory.button.35",
+    "file": "ios/Cacalc/MealDraftAccessory.swift",
+    "source": "Button(role: .destructive) { Task { await meal.discard() } } label: {"
+  },
+  {
+    "id": "ProductEditor.button.116",
+    "file": "ios/Cacalc/ProductEditor.swift",
+    "source": "Button(\"Удалить черновик\", role: .destructive) { Task { await library.discard() } }"
+  },
+  {
+    "id": "ProductEditor.button.121",
+    "file": "ios/Cacalc/ProductEditor.swift",
+    "source": "Button(\"Понятно\", role: .cancel) { voice.error = nil; library.error = nil }"
+  },
+  {
+    "id": "ProductEditor.button.123",
+    "file": "ios/Cacalc/ProductEditor.swift",
+    "source": "Button(\"Повторить\") { voice.error = nil; library.error = nil; voice.transcribe(library) }"
+  },
+  {
+    "id": "ProductEditor.button.201",
+    "file": "ios/Cacalc/ProductEditor.swift",
+    "source": "Button { close() } label: { Image(systemName: \"xmark\") }"
+  },
+  {
+    "id": "ProductEditor.button.207",
+    "file": "ios/Cacalc/ProductEditor.swift",
+    "source": "Button(\"Штрихкод\", systemImage: \"barcode\") { focused = nil; barcodeOpen = true }"
+  },
+  {
+    "id": "ProductEditor.button.209",
+    "file": "ios/Cacalc/ProductEditor.swift",
+    "source": "Button(\"Новая диктовка\", systemImage: \"mic\") { Task { await voice.start(library) } }"
+  },
+  {
+    "id": "ProductEditor.button.211",
+    "file": "ios/Cacalc/ProductEditor.swift",
+    "source": "Button(\"Удалить черновик\", systemImage: \"trash\", role: .destructive) { discard = true }"
+  },
+  {
+    "id": "ProductEditor.button.217",
+    "file": "ios/Cacalc/ProductEditor.swift",
+    "source": "Button {"
+  },
+  {
+    "id": "ProductEditor.button.227",
+    "file": "ios/Cacalc/ProductEditor.swift",
+    "source": "Button { moveFocus(-1) } label: { Image(systemName: \"chevron.up\").frame(width: 36, height: 44) }"
+  },
+  {
+    "id": "ProductEditor.button.229",
+    "file": "ios/Cacalc/ProductEditor.swift",
+    "source": "Button { moveFocus(1) } label: { Image(systemName: \"chevron.down\").frame(width: 36, height: 44) }"
+  },
+  {
+    "id": "ProductEditor.button.240",
+    "file": "ios/Cacalc/ProductEditor.swift",
+    "source": "Button(\"Готово\") { focused = nil }"
+  },
+  {
+    "id": "ProductEditor.button.254",
+    "file": "ios/Cacalc/ProductEditor.swift",
+    "source": "Button { voice.pause() } label: { Image(systemName: voice.phase == .paused ? \"play.fill\" : \"pause.fill\").frame(width: 24, height: 24) }"
+  },
+  {
+    "id": "ProductEditor.button.258",
+    "file": "ios/Cacalc/ProductEditor.swift",
+    "source": "Button { focused = nil; scannerOpen = true } label: {"
+  },
+  {
+    "id": "ProductEditor.button.269",
+    "file": "ios/Cacalc/ProductEditor.swift",
+    "source": "Button {"
+  },
+  {
+    "id": "ProductEditor.button.319",
+    "file": "ios/Cacalc/ProductEditor.swift",
+    "source": "Button(\"Остановить загрузку\", role: .cancel) { voice.cancel() }"
+  },
+  {
+    "id": "ProductEditor.button.321",
+    "file": "ios/Cacalc/ProductEditor.swift",
+    "source": "Button(\"Загрузить модели\") { voice.prepare(library) }.buttonStyle(.glassProminent)"
+  },
+  {
+    "id": "ProductEditor.button.350",
+    "file": "ios/Cacalc/ProductEditor.swift",
+    "source": "Button(\"Готово\") { dismiss() } } }"
+  },
+  {
+    "id": "ProductsView.button.17",
+    "file": "ios/Cacalc/ProductsView.swift",
+    "source": "Button { library.showingEditor = true } label: {"
+  },
+  {
+    "id": "ProductsView.button.29",
+    "file": "ios/Cacalc/ProductsView.swift",
+    "source": "Button { Task { await library.begin(product) } } label: {"
+  },
+  {
+    "id": "ProductsView.button.34",
+    "file": "ios/Cacalc/ProductsView.swift",
+    "source": "Button(role: .destructive) {"
+  },
+  {
+    "id": "ProductsView.button.70",
+    "file": "ios/Cacalc/ProductsView.swift",
+    "source": "Button { Task { await library.begin() } } label: {"
+  },
+  {
+    "id": "ProductsView.button.93",
+    "file": "ios/Cacalc/ProductsView.swift",
+    "source": "Button(\"Понятно\", role: .cancel) { library.error = nil }"
+  },
+  {
+    "id": "CacalcApp.button.160",
+    "file": "ios/Cacalc/CacalcApp.swift",
+    "source": "Button(\"Понятно\", role: .cancel) { store.error = nil; mealSession.error = nil }"
+  },
+  {
+    "id": "CacalcApp.button.199",
+    "file": "ios/Cacalc/CacalcApp.swift",
+    "source": "Button {"
+  },
+  {
+    "id": "CacalcApp.button.217",
+    "file": "ios/Cacalc/CacalcApp.swift",
+    "source": "Button { streakOpen = true } label: {"
+  },
+  {
+    "id": "CacalcApp.button.250",
+    "file": "ios/Cacalc/CacalcApp.swift",
+    "source": "Button(\"Сегодня\") { store.select(store.today); streakOpen = false }"
+  },
+  {
+    "id": "CacalcApp.button.254",
+    "file": "ios/Cacalc/CacalcApp.swift",
+    "source": "Button(\"Готово\") { streakOpen = false }"
+  },
+  {
+    "id": "CacalcApp.button.283",
+    "file": "ios/Cacalc/MealDraftAccessory.swift",
+    "source": "Button(action: beginMeal) {"
+  },
+  {
+    "id": "CacalcApp.button.290",
+    "file": "ios/Cacalc/MealDraftAccessory.swift",
+    "source": "Продолжить: выбрать перенесённый или другой сохранённый черновик"
+  },
+  {
+    "id": "CacalcApp.button.321",
+    "file": "ios/Cacalc/CacalcApp.swift",
+    "source": "Button(\"Задать цели КБЖУ\") {"
+  },
+  {
+    "id": "CacalcApp.button.346",
+    "file": "ios/Cacalc/CacalcApp.swift",
+    "source": "Button {"
+  },
+  {
+    "id": "CacalcApp.button.363",
+    "file": "ios/Cacalc/CacalcApp.swift",
+    "source": "Button {"
+  },
+  {
+    "id": "CacalcApp.button.375",
+    "file": "ios/Cacalc/CacalcApp.swift",
+    "source": "Button {"
+  },
+  {
+    "id": "Diary.mealType.change",
+    "file": "ios/Cacalc/CacalcApp.swift",
+    "source": "mealSession.reassignMeal(entries, to: destination)"
+  },
+  {
+    "id": "Scanner.button.30",
+    "file": "ios/Cacalc/Scanner.swift",
+    "source": "Button(\"Закрыть\") { dismiss() }.accessibilityIdentifier(\"closeScanner\")"
+  },
+  {
+    "id": "Scanner.button.40",
+    "file": "ios/Cacalc/Scanner.swift",
+    "source": "Button(returnTitle) { dismiss() }"
+  },
+  {
+    "id": "PreparedFoodView.button.37",
+    "file": "ios/Cacalc/PreparedFoodView.swift",
+    "source": "Button { open(savedDraft) } label: {"
+  },
+  {
+    "id": "PreparedFoodView.button.63",
+    "file": "ios/Cacalc/PreparedFoodView.swift",
+    "source": "Button(\"Закончилось\", systemImage: \"checkmark\") {"
+  },
+  {
+    "id": "PreparedFoodView.button.82",
+    "file": "ios/Cacalc/PreparedFoodView.swift",
+    "source": "Button(\"История приготовлений\", systemImage: \"clock.arrow.circlepath\") { showingHistory = true }"
+  },
+  {
+    "id": "PreparedFoodView.button.86",
+    "file": "ios/Cacalc/PreparedFoodView.swift",
+    "source": "Button(recipeMode ? \"Новый рецепт\" : \"Приготовить\", systemImage: \"plus\", action: start)"
+  },
+  {
+    "id": "PreparedFoodView.button.103",
+    "file": "ios/Cacalc/PreparedFoodView.swift",
+    "source": "Button(\"Новое блюдо\", systemImage: \"plus\") { queuedCooking = CookingState(); choosingRecipe = false }"
+  },
+  {
+    "id": "PreparedFoodView.button.106",
+    "file": "ios/Cacalc/PreparedFoodView.swift",
+    "source": "Button { queuedCooking = CookingState(recipe: recipe); choosingRecipe = false } label: { RecipeSummary(recipe: recipe) }.tint(.primary)"
+  },
+  {
+    "id": "PreparedFoodView.button.110",
+    "file": "ios/Cacalc/PreparedFoodView.swift",
+    "source": "Button(\"Закрыть\") { choosingRecipe = false } }"
+  },
+  {
+    "id": "PreparedFoodView.button.114",
+    "file": "ios/Cacalc/PreparedFoodView.swift",
+    "source": "Button(\"Понятно\") { error = nil }"
+  },
+  {
+    "id": "PreparedFoodView.button.124",
+    "file": "ios/Cacalc/PreparedFoodView.swift",
+    "source": "Button(recipeMode ? \"Создать рецепт\" : \"Приготовить блюдо\", action: start).buttonStyle(.borderedProminent)"
+  },
+  {
+    "id": "PreparedFoodView.button.206",
+    "file": "ios/Cacalc/PreparedFoodView.swift",
+    "source": "Button(\"Изменить\", action: edit) }"
+  },
+  {
+    "id": "PreparedFoodView.button.208",
+    "file": "ios/Cacalc/PreparedFoodView.swift",
+    "source": "Button(\"Приготовить\", action: cook).buttonStyle(.glassProminent).controlSize(.large)"
+  },
+  {
+    "id": "PreparedFoodView.button.242",
+    "file": "ios/Cacalc/PreparedFoodView.swift",
+    "source": "Button(\"Поправить остаток\") {"
+  },
+  {
+    "id": "PreparedFoodView.button.245",
+    "file": "ios/Cacalc/PreparedFoodView.swift",
+    "source": "Button(\"Повторить это приготовление\", action: repeatBatch)"
+  },
+  {
+    "id": "PreparedFoodView.button.257",
+    "file": "ios/Cacalc/PreparedFoodView.swift",
+    "source": "Button(\"Отмена\") { correcting = false } }"
+  },
+  {
+    "id": "PreparedFoodView.button.259",
+    "file": "ios/Cacalc/PreparedFoodView.swift",
+    "source": "Button(\"Сохранить\") {"
+  },
+  {
+    "id": "PreparedFoodView.button.324",
+    "file": "ios/Cacalc/PreparedFoodView.swift",
+    "source": "Button { chooseReplacement(ingredient.id) } label: {"
+  },
+  {
+    "id": "PreparedFoodView.button.342",
+    "file": "ios/Cacalc/PreparedFoodView.swift",
+    "source": "Button(\"Удалить\", systemImage: \"trash\", role: .destructive) {"
+  },
+  {
+    "id": "PreparedFoodView.button.345",
+    "file": "ios/Cacalc/PreparedFoodView.swift",
+    "source": "Button(\"Заменить\", systemImage: \"arrow.triangle.2.circlepath\") { chooseReplacement(ingredient.id) }.tint(.blue)"
+  },
+  {
+    "id": "PreparedFoodView.button.351",
+    "file": "ios/Cacalc/PreparedFoodView.swift",
+    "source": "Button(\"Добавить ингредиент\", systemImage: \"plus\") { replacingIngredient = nil; search = true }"
+  },
+  {
+    "id": "PreparedFoodView.button.378",
+    "file": "ios/Cacalc/PreparedFoodView.swift",
+    "source": "Button(\"Закрыть\") { if persist() { dismiss() } } }"
+  },
+  {
+    "id": "PreparedFoodView.button.380",
+    "file": "ios/Cacalc/PreparedFoodView.swift",
+    "source": "Button(\"Удалить заготовку\", role: .destructive) { confirmDiscard = true } } label: { Image(systemName: \"ellipsis\") }"
+  },
+  {
+    "id": "PreparedFoodView.button.384",
+    "file": "ios/Cacalc/PreparedFoodView.swift",
+    "source": "Button(templateOnly ? \"Сохранить рецепт\" : \"Блюдо готово\") {"
+  },
+  {
+    "id": "PreparedFoodView.button.412",
+    "file": "ios/Cacalc/PreparedFoodView.swift",
+    "source": "Button(\"Удалить\", role: .destructive) {"
+  },
+  {
+    "id": "PreparedFoodView.button.418",
+    "file": "ios/Cacalc/PreparedFoodView.swift",
+    "source": "Button(\"Понятно\") { error = nil }"
+  },
+  {
+    "id": "PreparedFoodView.button.436",
+    "file": "ios/Cacalc/PreparedFoodView.swift",
+    "source": "Button(\"\\(count)\") { state.portionText = String(count) }"
+  },
+  {
+    "id": "PreparedFoodView.button.473",
+    "file": "ios/Cacalc/PreparedFoodView.swift",
+    "source": "Button(\"Сохранить приготовление\") { save(recipe: false) }"
+  },
+  {
+    "id": "PreparedFoodView.button.508",
+    "file": "ios/Cacalc/PreparedFoodView.swift",
+    "source": "Button {"
+  },
+  {
+    "id": "PreparedFoodView.button.521",
+    "file": "ios/Cacalc/PreparedFoodView.swift",
+    "source": "Button(\"Закрыть\") { dismiss() } }"
+  },
+  {
+    "id": "MealNativeSearch.button.21",
+    "file": "ios/Cacalc/MealNativeSearch.swift",
+    "source": "Button(\"Быстрый ввод\", systemImage: \"square.and.pencil\", action: quickEntry)"
+  },
+  {
+    "id": "MealNativeSearch.button.24",
+    "file": "ios/Cacalc/MealNativeSearch.swift",
+    "source": "Button { select(product) } label: {"
+  },
+  {
+    "id": "MealNativeSearch.button.34",
+    "file": "ios/Cacalc/MealNativeSearch.swift",
+    "source": "Button(\"Добавить «\\(query)»\") { addUnknown(query) } }"
+  },
+  {
+    "id": "FoodSheet.button.32",
+    "file": "ios/Cacalc/FoodSheet.swift",
+    "source": "Button(\"Готово\") { UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil) }"
+  },
+  {
+    "id": "FoodSheet.button.36",
+    "file": "ios/Cacalc/FoodSheet.swift",
+    "source": "Button(\"Закрыть\") { dismiss() }.accessibilityIdentifier(\"closeFood\")"
+  },
+  {
+    "id": "FoodSheet.button.40",
+    "file": "ios/Cacalc/FoodSheet.swift",
+    "source": "Button(\"Удалить черновик\", role: .destructive) { discardAlert = true }"
+  },
+  {
+    "id": "FoodSheet.button.45",
+    "file": "ios/Cacalc/FoodSheet.swift",
+    "source": "Button(\"Понятно\", role: .cancel) { store.error = nil }"
+  },
+  {
+    "id": "FoodSheet.button.48",
+    "file": "ios/Cacalc/FoodSheet.swift",
+    "source": "Button(\"Удалить черновик\", role: .destructive) { store.perform { try store.persistDraft(nil); dismiss() } }"
+  },
+  {
+    "id": "FoodSheet.button.51",
+    "file": "ios/Cacalc/FoodSheet.swift",
+    "source": "Button(\"Удалить запись\", role: .destructive) {"
+  },
+  {
+    "id": "FoodSheet.button.73",
+    "file": "ios/Cacalc/FoodSheet.swift",
+    "source": "Button { scannerOpen = true } label: { Label(\"Сканировать штрихкод\", systemImage: \"barcode.viewfinder\") }"
+  },
+  {
+    "id": "FoodSheet.button.87",
+    "file": "ios/Cacalc/FoodSheet.swift",
+    "source": "Button { store.choose(product) } label: {"
+  },
+  {
+    "id": "FoodSheet.button.101",
+    "file": "ios/Cacalc/FoodSheet.swift",
+    "source": "Button { store.customProduct() } label: { Label(\"Создать свой продукт\", systemImage: \"plus.circle\") }"
+  },
+  {
+    "id": "FoodSheet.button.124",
+    "file": "ios/Cacalc/FoodSheet.swift",
+    "source": "Button(\"Выбрать другой продукт\") { store.editDraft { $0.product = nil; $0.quantity = \"\"; $0.basis = .unknown } }"
+  },
+  {
+    "id": "FoodSheet.button.144",
+    "file": "ios/Cacalc/FoodSheet.swift",
+    "source": "Button(\"Дополнить КБЖУ\") { store.customProduct() }"
+  },
+  {
+    "id": "FoodSheet.button.158",
+    "file": "ios/Cacalc/FoodSheet.swift",
+    "source": "Button(\"Исправить по упаковке\") { store.customProduct() }"
+  },
+  {
+    "id": "FoodSheet.button.160",
+    "file": "ios/Cacalc/FoodSheet.swift",
+    "source": "Button(\"Удалить запись\", role: .destructive) { deleteAlert = true } }"
+  },
+  {
+    "id": "FoodSheet.button.167",
+    "file": "ios/Cacalc/FoodSheet.swift",
+    "source": "Button(d.day > store.today ? \"Запланировать\" : \"Сохранить запись\") { store.perform { try store.commitDraft() } }"
+  },
+  {
+    "id": "FoodSheet.button.199",
+    "file": "ios/Cacalc/FoodSheet.swift",
+    "source": "Button(\"Далее — количество\") { store.perform { try store.finishCustom() } }"
+  },
+  {
+    "id": "MealDictationControl.button.17",
+    "file": "ios/Cacalc/MealDictationControl.swift",
+    "source": "Button {"
+  },
+  {
+    "id": "MealDictationControl.button.78",
+    "file": "ios/Cacalc/MealDictationControl.swift",
+    "source": "Button(action: start) {"
+  },
+  {
+    "id": "MealDictationControl.button.133",
+    "file": "ios/Cacalc/MealDictationControl.swift",
+    "source": "Button(action: finishRecording) {"
+  },
+  {
+    "id": "MealQuickEntry.button.49",
+    "file": "ios/Cacalc/MealQuickEntry.swift",
+    "source": "Button(\"Отмена\") { dismiss() }.disabled(saving) }"
+  },
+  {
+    "id": "MealQuickEntry.button.51",
+    "file": "ios/Cacalc/MealQuickEntry.swift",
+    "source": "Button(row.manualNutrition == nil ? \"Добавить\" : \"Сохранить\") {"
+  },
+  {
+    "id": "Planner.consume",
+    "file": "ios/Cacalc/CacalcApp.swift",
+    "source": "Button: Съел сейчас"
+  },
+  {
+    "id": "Profile.sleepConnect",
+    "file": "ios/Cacalc/HealthSleep.swift",
+    "source": "Button: connect sleep"
+  },
+  {
+    "id": "Profile.sleepDisconnect",
+    "file": "ios/Cacalc/HealthSleep.swift",
+    "source": "Button: disconnect sleep"
+  },
+  {
+    "id": "Health.refresh",
+    "file": "ios/Cacalc/HealthSleep.swift",
+    "source": "Button: refresh health"
+  },
+  {
+    "id": "Measurements.edit",
+    "file": "ios/Cacalc/BodyMeasurementsView.swift",
+    "source": "Button: edit"
+  },
+  {
+    "id": "Measurements.delete",
+    "file": "ios/Cacalc/BodyMeasurementsView.swift",
+    "source": "Button: delete"
+  },
+  {
+    "id": "Measurements.add",
+    "file": "ios/Cacalc/BodyMeasurementsView.swift",
+    "source": "Button: add"
+  },
+  {
+    "id": "Measurements.cancel",
+    "file": "ios/Cacalc/BodyMeasurementsView.swift",
+    "source": "Button: cancel"
+  },
+  {
+    "id": "Measurements.save",
+    "file": "ios/Cacalc/BodyMeasurementsView.swift",
+    "source": "Button: save"
+  },
+  {
+    "id": "Diary.measurements",
+    "file": "ios/Cacalc/CacalcApp.swift",
+    "source": "Button: quick measurements"
+  },
+  {
+    "id": "QuickMeasurements.cancel",
+    "file": "ios/Cacalc/BodyMeasurementsView.swift",
+    "source": "Button: cancel"
+  },
+  {
+    "id": "QuickMeasurements.save",
+    "file": "ios/Cacalc/BodyMeasurementsView.swift",
+    "source": "Button: save"
+  },
+  {
+    "id": "Combination.delete",
+    "file": "ios/Cacalc/FoodCombinationView.swift",
+    "source": "Сочетания: Combination.delete"
+  },
+  {
+    "id": "Combination.create",
+    "file": "ios/Cacalc/FoodCombinationView.swift",
+    "source": "Сочетания: Combination.create"
+  },
+  {
+    "id": "Combination.listError",
+    "file": "ios/Cacalc/FoodCombinationView.swift",
+    "source": "Сочетания: Combination.listError"
+  },
+  {
+    "id": "Combination.removeComponent",
+    "file": "ios/Cacalc/FoodCombinationView.swift",
+    "source": "Сочетания: Combination.removeComponent"
+  },
+  {
+    "id": "Combination.replaceProduct",
+    "file": "ios/Cacalc/FoodCombinationView.swift",
+    "source": "Сочетания: Combination.replaceProduct"
+  },
+  {
+    "id": "Combination.replaceRecipe",
+    "file": "ios/Cacalc/FoodCombinationView.swift",
+    "source": "Сочетания: Combination.replaceRecipe"
+  },
+  {
+    "id": "Combination.addProduct",
+    "file": "ios/Cacalc/FoodCombinationView.swift",
+    "source": "Сочетания: Combination.addProduct"
+  },
+  {
+    "id": "Combination.addRecipe",
+    "file": "ios/Cacalc/FoodCombinationView.swift",
+    "source": "Сочетания: Combination.addRecipe"
+  },
+  {
+    "id": "Combination.cancelEdit",
+    "file": "ios/Cacalc/FoodCombinationView.swift",
+    "source": "Сочетания: Combination.cancelEdit"
+  },
+  {
+    "id": "Combination.save",
+    "file": "ios/Cacalc/FoodCombinationView.swift",
+    "source": "Сочетания: Combination.save"
+  },
+  {
+    "id": "Combination.use",
+    "file": "ios/Cacalc/FoodCombinationView.swift",
+    "source": "Сочетания: Combination.use"
+  },
+  {
+    "id": "Combination.edit",
+    "file": "ios/Cacalc/FoodCombinationView.swift",
+    "source": "Сочетания: Combination.edit"
+  },
+  {
+    "id": "Combination.cancelUse",
+    "file": "ios/Cacalc/FoodCombinationView.swift",
+    "source": "Сочетания: Combination.cancelUse"
+  },
+  {
+    "id": "Combination.confirmUse",
+    "file": "ios/Cacalc/FoodCombinationView.swift",
+    "source": "Сочетания: Combination.confirmUse"
+  },
+  {
+    "id": "MealCombination.pick",
+    "file": "ios/Cacalc/MealEntryView.swift",
+    "source": "Сочетания: MealCombination.pick"
+  },
+  {
+    "id": "MealCombination.save",
+    "file": "ios/Cacalc/MealEntryView.swift",
+    "source": "Сочетания: MealCombination.save"
+  },
+  {
+    "id": "MealCombination.close",
+    "file": "ios/Cacalc/MealEntryView.swift",
+    "source": "Сочетания: MealCombination.close"
+  },
+  {
+    "id": "Combination.resumeDraft",
+    "file": "ios/Cacalc/FoodCombinationView.swift",
+    "source": "Продолжить выбранное сочетание"
+  },
+  {
+    "id": "Combination.discardDraft",
+    "file": "ios/Cacalc/FoodCombinationView.swift",
+    "source": "Запросить удаление черновика сочетания"
+  },
+  {
+    "id": "Combination.confirmDiscardDraft",
+    "file": "ios/Cacalc/FoodCombinationView.swift",
+    "source": "Подтвердить удаление черновика сочетания"
+  },
+  {
+    "id": "MealDraft.select",
+    "file": "ios/Cacalc/MealDraftAccessory.swift",
+    "source": "Продолжить выбранный приём"
+  },
+  {
+    "id": "MealDraft.closeList",
+    "file": "ios/Cacalc/MealDraftAccessory.swift",
+    "source": "Закрыть список черновиков"
+  },
+  {
+    "id": "MealDraft.new",
+    "file": "ios/Cacalc/MealDraftAccessory.swift",
+    "source": "Новый приём из меню черновика"
+  },
+  {
+    "id": "MealDraft.list",
+    "file": "ios/Cacalc/MealDraftAccessory.swift",
+    "source": "Все черновики"
+  },
+  {
+    "id": "MealDraft.newFromList",
+    "file": "ios/Cacalc/MealDraftAccessory.swift",
+    "source": "Новый приём без активного черновика"
+  },
+  {
+    "id": "MealPending.add",
+    "file": "ios/Cacalc/MealEntryView.swift",
+    "source": "Добавить неразобранную еду без карточки"
+  },
+  {
+    "id": "MealPending.skip",
+    "file": "ios/Cacalc/MealEntryView.swift",
+    "source": "Явно пропустить неразобранный фрагмент"
+  }
+]

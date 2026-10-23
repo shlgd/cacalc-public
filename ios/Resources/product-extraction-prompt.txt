@@ -1,0 +1,27 @@
+Extract ONE food product from a conversational Russian label dictation. Return ONLY a compact JSON object. No explanation, reasoning or markdown.
+The output schema is exactly:
+{"name":"","brand":null,"manufacturer":null,"basis":null,"calories":null,"protein":null,"fat":null,"carbs":null}
+name, brand and manufacturer are text; name is a short Russian product name without brand, package weight or nutrition. Unknown brand/manufacturer is null. A brand is NOT a manufacturer. Put the brand in brand only, never repeat it in name. Separate a label-style product+brand phrase even without the word "марка". A shopping location alone does not identify the brand: "купил в Ленте" is a store, while "тунец Лента" is a product with a stated brand. Preserve the food type and preparation in name, not just the brand. basis is "g" (per 100 grams), "ml" (per 100 ml), or null. The four nutrients are JSON numbers or null, never quoted numbers or objects.
+
+Understand the entire utterance, including pauses, fillers, arbitrary order, later corrections and references to earlier fields. The last explicit correction replaces the earlier value. Never infer nutrition from food knowledge. Do not add up conversational digits. Interpret common informal decimal pronunciation in nutrition context:
+"пять и восемь" = 5.8; "один сорок два" = 1.42; "ноль пять" = 0.5; "полграмма" = 0.5; "ноль ноль пять" = 0.05; "две целых семь сотых" = 2.07. Preserve leading fractional zeroes. A spoken "запятая" or "точка" is a decimal separator, even with punctuation next to that word. Explicitly stated zero is 0, not null.
+calories means kcal ONLY. kJ without kcal => calories null. Package weight and price are not nutrients. A percentage of fat in dry matter is not grams of fat => fat null unless grams were also stated. If the stated values are per portion rather than per 100 g/ml, all four nutrients must be null; do not convert them. If multiple products or unlabeled numbers are given, use null for unresolved fields.
+
+Input: Это йогурт, марка Пример, на сто граммов белка пять, ой нет, пять и восемь, жира полграмма, углеводов один сорок два.
+Output: {"name":"Йогурт","brand":"Пример","manufacturer":null,"basis":"g","calories":null,"protein":5.8,"fat":0.5,"carbs":1.42}
+Input: Тестовый напиток на 100 мл, белки 2,9, жиры 1,5, углеводы 4,9, энергия 209 кДж.
+Output: {"name":"Тестовый напиток","brand":null,"manufacturer":null,"basis":"ml","calories":null,"protein":2.9,"fat":1.5,"carbs":4.9}
+Input: Сыр, жирность в сухом веществе 45 процентов. На сто граммов белков 26, углеводов ноль. Жира в граммах не знаю.
+Output: {"name":"Сыр","brand":null,"manufacturer":null,"basis":"g","calories":null,"protein":26,"fat":null,"carbs":0}
+
+Input: Тунец Лента в собственном соку. На 100 граммов белки 24, жиры 1, углеводы 0, калории 105.
+Output: {"name":"Тунец в собственном соку","brand":"Лента","manufacturer":null,"basis":"g","calories":105,"protein":24,"fat":1,"carbs":0}
+
+Input: Купил в Ленте тунец в собственном соку, марку не помню. На сто граммов белки 22, жиры 2, углеводы 0.
+Output: {"name":"Тунец в собственном соку","brand":null,"manufacturer":null,"basis":"g","calories":null,"protein":22,"fat":2,"carbs":0}
+
+Input: Соус Пример на сто граммов. Белка две целых три сотых, жиров ноль ноль два, углеводов один и пять.
+Output: {"name":"Соус","brand":"Пример","manufacturer":null,"basis":"g","calories":null,"protein":2.03,"fat":0.02,"carbs":1.5}
+
+Input: Десерт Пример. На порцию 150 граммов: белки 8, жиры 6, углеводы 20, калорий 166. На 100 граммов не указано.
+Output: {"name":"Десерт","brand":"Пример","manufacturer":null,"basis":null,"calories":null,"protein":null,"fat":null,"carbs":null}

@@ -1,0 +1,428 @@
+{
+  "foods": [
+    "яблоко",
+    "банан",
+    "огурец",
+    "молоко 1%",
+    "гречка агроальянс",
+    "кукурузные хлопья любятово",
+    "яичный белок",
+    "творог без сахара",
+    "яблочный сок",
+    "куриная грудка",
+    "сыр гауда",
+    "рис вареный",
+    "хлеб ржаной",
+    "оливковое масло"
+  ],
+  "cases": [
+    {
+      "category": "holdout-v1",
+      "text": "Бананов сорок два грамма, дальше молоко один процент двести сорок миллилитров",
+      "rows": [
+        {
+          "food": "бананов",
+          "quantity": "42",
+          "unit": "g"
+        },
+        {
+          "food": "молоко 1%",
+          "quantity": "240",
+          "unit": "ml"
+        }
+      ],
+      "pending": false
+    },
+    {
+      "category": "holdout-v1",
+      "text": "семьдесят три грамма яблока огурец девяносто один грамм",
+      "rows": [
+        {
+          "food": "яблока",
+          "quantity": "73",
+          "unit": "g"
+        },
+        {
+          "food": "огурец",
+          "quantity": "91",
+          "unit": "g"
+        }
+      ],
+      "pending": false
+    },
+    {
+      "category": "holdout-v1",
+      "text": "гречка Агро Альянс двести тридцать четыре грамма",
+      "rows": [
+        {
+          "food": "гречка агро альянс",
+          "quantity": "234",
+          "unit": "g"
+        }
+      ],
+      "pending": false
+    },
+    {
+      "category": "holdout-v1",
+      "text": "двести тридцать четыре грамма гречка Агро Альянс",
+      "rows": [
+        {
+          "food": "гречка агро альянс",
+          "quantity": "234",
+          "unit": "g"
+        }
+      ],
+      "pending": false
+    },
+    {
+      "category": "holdout-v1",
+      "text": "яичный белок 87 г дальше 142 г куриной грудки",
+      "rows": [
+        {
+          "food": "яичный белок",
+          "quantity": "87",
+          "unit": "g"
+        },
+        {
+          "food": "куриной грудки",
+          "quantity": "142",
+          "unit": "g"
+        }
+      ],
+      "pending": false
+    },
+    {
+      "category": "holdout-v1",
+      "text": "оливковое масло три запятая пять грамма",
+      "rows": [
+        {
+          "food": "оливковое масло",
+          "quantity": "3.5",
+          "unit": "g"
+        }
+      ],
+      "pending": false
+    },
+    {
+      "category": "holdout-v1",
+      "text": "молоко полтора литра",
+      "rows": [
+        {
+          "food": "молоко",
+          "quantity": "1.5",
+          "unit": "l"
+        }
+      ],
+      "pending": false
+    },
+    {
+      "category": "holdout-v1",
+      "text": "два яйца",
+      "rows": [],
+      "pending": true
+    },
+    {
+      "category": "holdout-v1",
+      "text": "яйца две штуки",
+      "rows": [
+        {
+          "food": "яйца",
+          "quantity": "2",
+          "unit": "pc"
+        }
+      ],
+      "pending": false
+    },
+    {
+      "category": "holdout-v1",
+      "text": "две штуки яйца",
+      "rows": [
+        {
+          "food": "яйца",
+          "quantity": "2",
+          "unit": "pc"
+        }
+      ],
+      "pending": false
+    },
+    {
+      "category": "holdout-v1",
+      "text": "молоко 1,5 процента 175 мл",
+      "rows": [
+        {
+          "food": "молоко 1.5%",
+          "quantity": "175",
+          "unit": "ml"
+        }
+      ],
+      "pending": false
+    },
+    {
+      "category": "holdout-v1",
+      "text": "творог пять процентов 125 граммов",
+      "rows": [
+        {
+          "food": "творог 5%",
+          "quantity": "125",
+          "unit": "g"
+        }
+      ],
+      "pending": false
+    },
+    {
+      "category": "holdout-v1",
+      "text": "творог без сахара 77 граммов",
+      "rows": [
+        {
+          "food": "творог без сахара",
+          "quantity": "77",
+          "unit": "g"
+        }
+      ],
+      "pending": false
+    },
+    {
+      "category": "holdout-v1",
+      "text": "77 граммов творога без сахара",
+      "rows": [
+        {
+          "food": "творога без сахара",
+          "quantity": "77",
+          "unit": "g"
+        }
+      ],
+      "pending": false
+    },
+    {
+      "category": "holdout-v1",
+      "text": "банан 90 грамм дальше загадочное блюдо 180 грамм",
+      "rows": [
+        {
+          "food": "банан",
+          "quantity": "90",
+          "unit": "g"
+        },
+        {
+          "food": "загадочное блюдо",
+          "quantity": "180",
+          "unit": "g"
+        }
+      ],
+      "pending": false
+    },
+    {
+      "category": "holdout-v1",
+      "text": "90 грамм загадочного блюда дальше яблоко 180 грамм",
+      "rows": [
+        {
+          "food": "загадочного блюда",
+          "quantity": "90",
+          "unit": "g"
+        },
+        {
+          "food": "яблоко",
+          "quantity": "180",
+          "unit": "g"
+        }
+      ],
+      "pending": false
+    },
+    {
+      "category": "holdout-v1",
+      "text": "хлеб ржаной 60 граммов сыр гауда 25 граммов",
+      "rows": [
+        {
+          "food": "хлеб ржаной",
+          "quantity": "60",
+          "unit": "g"
+        },
+        {
+          "food": "сыр гауда",
+          "quantity": "25",
+          "unit": "g"
+        }
+      ],
+      "pending": false
+    },
+    {
+      "category": "holdout-v1",
+      "text": "60 граммов хлеба ржаного 25 граммов сыра гауда",
+      "rows": [
+        {
+          "food": "хлеба ржаного",
+          "quantity": "60",
+          "unit": "g"
+        },
+        {
+          "food": "сыра гауда",
+          "quantity": "25",
+          "unit": "g"
+        }
+      ],
+      "pending": false
+    },
+    {
+      "category": "holdout-v1",
+      "text": "банан 90 грамм нет 95 грамм дальше яблоко 140 грамм",
+      "rows": [
+        {
+          "food": "банан",
+          "quantity": "95",
+          "unit": "g"
+        },
+        {
+          "food": "яблоко",
+          "quantity": "140",
+          "unit": "g"
+        }
+      ],
+      "pending": false
+    },
+    {
+      "category": "holdout-v1",
+      "text": "банан 90 грамм вернее 95",
+      "rows": [
+        {
+          "food": "банан",
+          "quantity": "95",
+          "unit": "g"
+        }
+      ],
+      "pending": false
+    },
+    {
+      "category": "holdout-v1",
+      "text": "банан 90 грамм нет один процент",
+      "rows": [
+        {
+          "food": "банан",
+          "quantity": "90",
+          "unit": "g"
+        }
+      ],
+      "pending": true
+    },
+    {
+      "category": "holdout-v1",
+      "text": "молоко один процент дальше банан 90 грамм",
+      "rows": [
+        {
+          "food": "банан",
+          "quantity": "90",
+          "unit": "g"
+        }
+      ],
+      "pending": true
+    },
+    {
+      "category": "holdout-v1",
+      "text": "яблоко и банан 190 грамм",
+      "rows": [],
+      "pending": true
+    },
+    {
+      "category": "holdout-v1",
+      "text": "яблоко банан по сто грамм",
+      "rows": [],
+      "pending": true
+    },
+    {
+      "category": "holdout-v1",
+      "text": "молоко от 100 до 200 грамм",
+      "rows": [],
+      "pending": true
+    },
+    {
+      "category": "holdout-v1",
+      "text": "яблоко 100 грамм банан 100",
+      "rows": [
+        {
+          "food": "яблоко",
+          "quantity": "100",
+          "unit": "g"
+        },
+        {
+          "food": "банан",
+          "quantity": "100",
+          "unit": "g"
+        }
+      ],
+      "pending": false
+    },
+    {
+      "category": "holdout-v1",
+      "text": "ну вот добавил банан сто пятьдесят грамм и огурец двести грамм",
+      "rows": [
+        {
+          "food": "банан",
+          "quantity": "150",
+          "unit": "g"
+        },
+        {
+          "food": "огурец",
+          "quantity": "200",
+          "unit": "g"
+        }
+      ],
+      "pending": false
+    },
+    {
+      "category": "holdout-v1",
+      "text": "банан сто пятьдеграмм дальше огурец двести грамм",
+      "rows": [
+        {
+          "food": "огурец",
+          "quantity": "200",
+          "unit": "g"
+        }
+      ],
+      "pending": true
+    },
+    {
+      "category": "holdout-v1",
+      "text": "молоко минус двадцать грамм",
+      "rows": [],
+      "pending": true
+    },
+    {
+      "category": "holdout-v1",
+      "text": "творог 5% 0 грамм",
+      "rows": [],
+      "pending": true
+    },
+    {
+      "category": "holdout-v1",
+      "text": "банан 90 грамм дальше банан 70 грамм",
+      "rows": [
+        {
+          "food": "банан",
+          "quantity": "90",
+          "unit": "g"
+        },
+        {
+          "food": "банан",
+          "quantity": "70",
+          "unit": "g"
+        }
+      ],
+      "pending": false
+    },
+    {
+      "category": "holdout-v1",
+      "text": "молоко 1% 220 г дальше молоко 3,2% 110 г",
+      "rows": [
+        {
+          "food": "молоко 1%",
+          "quantity": "220",
+          "unit": "g"
+        },
+        {
+          "food": "молоко 3.2%",
+          "quantity": "110",
+          "unit": "g"
+        }
+      ],
+      "pending": false
+    }
+  ]
+}

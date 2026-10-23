@@ -1,0 +1,295 @@
+{
+  "synthetic": true,
+  "created": "2026-09-13",
+  "notes": "Two known regression cases and ten new follow-up cases after examining v16/v18. This targeted follow-up is not an untouched general-distribution holdout. Expectations frozen before v2 inference.",
+  "cases": [
+    {
+      "id": "r16",
+      "phase": "regression",
+      "text": "В ресторане съел одну порцию рамена. Вес порции не знаю.",
+      "expected": [
+        {
+          "items": [
+            {
+              "names": [
+                "рамен",
+                "рамена"
+              ],
+              "amount": 1,
+              "unit": "portion"
+            }
+          ],
+          "review": false
+        }
+      ]
+    },
+    {
+      "id": "r18",
+      "phase": "regression",
+      "text": "Огурцы и помидоры вместе сто пятьдесят грамм, отдельно не взвешивал.",
+      "expected": [
+        {
+          "items": [
+            {
+              "names": [
+                "огурцы"
+              ],
+              "amount": null,
+              "unit": "g"
+            },
+            {
+              "names": [
+                "помидоры"
+              ],
+              "amount": null,
+              "unit": "g"
+            }
+          ],
+          "review": true
+        },
+        {
+          "items": [
+            {
+              "names": [
+                "огурцы"
+              ],
+              "amount": null,
+              "unit": null
+            },
+            {
+              "names": [
+                "помидоры"
+              ],
+              "amount": null,
+              "unit": null
+            }
+          ],
+          "review": true
+        },
+        {
+          "items": [
+            {
+              "names": [
+                "огурцы и помидоры"
+              ],
+              "amount": 150,
+              "unit": "g"
+            }
+          ],
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "f01",
+      "phase": "followup",
+      "text": "Съел два сырника. Сколько они весят, не знаю.",
+      "expected": [
+        {
+          "items": [
+            {
+              "names": [
+                "сырники",
+                "сырник",
+                "сырника"
+              ],
+              "amount": 2,
+              "unit": "pc"
+            }
+          ],
+          "review": false
+        }
+      ]
+    },
+    {
+      "id": "f02",
+      "phase": "followup",
+      "text": "Было две порции супа, общий вес я не знаю.",
+      "expected": [
+        {
+          "items": [
+            {
+              "names": [
+                "суп",
+                "супа"
+              ],
+              "amount": 2,
+              "unit": "portion"
+            }
+          ],
+          "review": false
+        }
+      ]
+    },
+    {
+      "id": "f03",
+      "phase": "followup",
+      "text": "Съел полторы порции плова.",
+      "expected": [
+        {
+          "items": [
+            {
+              "names": [
+                "плов",
+                "плова"
+              ],
+              "amount": 1.5,
+              "unit": "portion"
+            }
+          ],
+          "review": false
+        }
+      ]
+    },
+    {
+      "id": "f04",
+      "phase": "followup",
+      "text": "Хлеб и ветчина вместе восемьдесят пять грамм.",
+      "expected": [
+        {
+          "items": [
+            {
+              "names": [
+                "хлеб и ветчина"
+              ],
+              "amount": 85,
+              "unit": "g"
+            }
+          ],
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "f05",
+      "phase": "followup",
+      "text": "Кабачки с баклажанами вместе двести двадцать грамм, отдельно не взвешивал.",
+      "expected": [
+        {
+          "items": [
+            {
+              "names": [
+                "кабачки с баклажанами",
+                "кабачки и баклажаны"
+              ],
+              "amount": 220,
+              "unit": "g"
+            }
+          ],
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "f06",
+      "phase": "followup",
+      "text": "Хлеб двадцать пять грамм, ветчина шестьдесят грамм.",
+      "expected": [
+        {
+          "items": [
+            {
+              "names": [
+                "хлеб"
+              ],
+              "amount": 25,
+              "unit": "g"
+            },
+            {
+              "names": [
+                "ветчина"
+              ],
+              "amount": 60,
+              "unit": "g"
+            }
+          ],
+          "review": false
+        }
+      ]
+    },
+    {
+      "id": "f07",
+      "phase": "followup",
+      "text": "Сыра 17,25 грамма и ряженки двести сорок миллилитров.",
+      "expected": [
+        {
+          "items": [
+            {
+              "names": [
+                "сыр",
+                "сыра"
+              ],
+              "amount": 17.25,
+              "unit": "g"
+            },
+            {
+              "names": [
+                "ряженка",
+                "ряженки"
+              ],
+              "amount": 240,
+              "unit": "ml"
+            }
+          ],
+          "review": false
+        }
+      ]
+    },
+    {
+      "id": "f08",
+      "phase": "followup",
+      "text": "Купил йогурт Чудо, в пачке двести девяносто грамм. Съел сто десять грамм этого йогурта.",
+      "expected": [
+        {
+          "items": [
+            {
+              "names": [
+                "йогурт Чудо"
+              ],
+              "amount": 110,
+              "unit": "g"
+            }
+          ],
+          "review": false
+        }
+      ]
+    },
+    {
+      "id": "f09",
+      "phase": "followup",
+      "text": "Одно яблоко, но нет, не яблоко, один банан. Вес не знаю.",
+      "expected": [
+        {
+          "items": [
+            {
+              "names": [
+                "банан"
+              ],
+              "amount": 1,
+              "unit": "pc"
+            }
+          ],
+          "review": false
+        }
+      ]
+    },
+    {
+      "id": "f10",
+      "phase": "followup",
+      "text": "Съел пирожное, но не помню, одно или два.",
+      "expected": [
+        {
+          "items": [
+            {
+              "names": [
+                "пирожное"
+              ],
+              "amount": null,
+              "unit": "pc"
+            }
+          ],
+          "review": true
+        }
+      ]
+    }
+  ]
+}

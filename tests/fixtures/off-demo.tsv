@@ -1,0 +1,6 @@
+code	product_name	brands	countries_tags	energy-kcal_100g	energy_100g	proteins_100g	fat_100g	carbohydrates_100g	last_modified_t	data_quality_errors_tags
+0000000000001	ДЕМО Пшённая крупа	Пример	en:russia	300	1255.2	10	5	50		
+0000000000002	ДЕМО Молочный напиток	Пример	en:russia,en:belarus	50	209.2	3	2	4		
+0000000000003	ДЕМО Неполная карточка	Пример	en:russia	100	418.4		0	20		
+0000000000004	ДЕМО Другой рынок	Пример	en:france	200	836.8	5	10	20		
+

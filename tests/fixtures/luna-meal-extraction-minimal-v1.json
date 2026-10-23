@@ -1,0 +1,297 @@
+{
+  "synthetic": true,
+  "created": "2026-09-13",
+  "notes": "Final minimal extraction contract: items only, no review classification. Two known regressions plus twelve new targeted follow-up phrases. Prepared before final-prompt calls; not a broad accuracy estimate. Uncertainty is represented by null. Explicit shared totals are preserved as one named group, never allocated to ingredients.",
+  "cases": [
+    {
+      "id": "minimal-v16",
+      "phase": "regression",
+      "text": "В ресторане съел одну порцию рамена. Вес порции не знаю.",
+      "expected": [
+        {
+          "items": [
+            {
+              "names": [
+                "рамен",
+                "рамена"
+              ],
+              "amount": 1,
+              "unit": "portion"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "minimal-f04",
+      "phase": "regression",
+      "text": "Хлеб и ветчина вместе восемьдесят пять грамм.",
+      "expected": [
+        {
+          "items": [
+            {
+              "names": [
+                "хлеб и ветчина"
+              ],
+              "amount": 85,
+              "unit": "g"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n01",
+      "phase": "followup",
+      "text": "Рыбы на пару сто тридцать пять грамм и печёного картофеля девяносто грамм.",
+      "expected": [
+        {
+          "items": [
+            {
+              "names": [
+                "рыба на пару",
+                "рыбы на пару"
+              ],
+              "amount": 135,
+              "unit": "g"
+            },
+            {
+              "names": [
+                "печёный картофель",
+                "печёного картофеля"
+              ],
+              "amount": 90,
+              "unit": "g"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n02",
+      "phase": "followup",
+      "text": "Тридцать два запятая пять грамма хлеба Лента, молока ноль запятая тридцать пять литра.",
+      "expected": [
+        {
+          "items": [
+            {
+              "names": [
+                "хлеб Лента",
+                "хлеба Лента"
+              ],
+              "amount": 32.5,
+              "unit": "g"
+            },
+            {
+              "names": [
+                "молоко",
+                "молока"
+              ],
+              "amount": 0.35,
+              "unit": "l"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n03",
+      "phase": "followup",
+      "text": "Три варёных перепелиных яйца, вес я не знаю.",
+      "expected": [
+        {
+          "items": [
+            {
+              "names": [
+                "варёные перепелиные яйца",
+                "варёное перепелиное яйцо",
+                "перепелиные яйца варёные"
+              ],
+              "amount": 3,
+              "unit": "pc"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n04",
+      "phase": "followup",
+      "text": "Половину порции борща.",
+      "expected": [
+        {
+          "items": [
+            {
+              "names": [
+                "борщ",
+                "борща"
+              ],
+              "amount": 0.5,
+              "unit": "portion"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n05",
+      "phase": "followup",
+      "text": "Сыра восемнадцать грамм, нет, двадцать два грамма. Хлеба сорок грамм.",
+      "expected": [
+        {
+          "items": [
+            {
+              "names": [
+                "сыр",
+                "сыра"
+              ],
+              "amount": 22,
+              "unit": "g"
+            },
+            {
+              "names": [
+                "хлеб",
+                "хлеба"
+              ],
+              "amount": 40,
+              "unit": "g"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n06",
+      "phase": "followup",
+      "text": "Сыр с орехами вместе шестьдесят грамм. Отдельно не взвешивал.",
+      "expected": [
+        {
+          "items": [
+            {
+              "names": [
+                "сыр с орехами",
+                "сыр и орехи"
+              ],
+              "amount": 60,
+              "unit": "g"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n07",
+      "phase": "followup",
+      "text": "Мёда граммов то ли семь, то ли девять.",
+      "expected": [
+        {
+          "items": [
+            {
+              "names": [
+                "мёд",
+                "мёда"
+              ],
+              "amount": null,
+              "unit": "g"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n08",
+      "phase": "followup",
+      "text": "Огурцов двести.",
+      "expected": [
+        {
+          "items": [
+            {
+              "names": [
+                "огурцы",
+                "огурцов",
+                "огурец"
+              ],
+              "amount": 200,
+              "unit": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n09",
+      "phase": "followup",
+      "text": "Греческий йогурт Простоквашино два процента, сто семьдесят пять грамм.",
+      "expected": [
+        {
+          "items": [
+            {
+              "names": [
+                "греческий йогурт Простоквашино 2%",
+                "греческий йогурт Простоквашино два процента"
+              ],
+              "amount": 175,
+              "unit": "g"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n10",
+      "phase": "followup",
+      "text": "Фасоль в томатном соусе Лента, упаковка четыреста грамм. Из неё съел сто грамм.",
+      "expected": [
+        {
+          "items": [
+            {
+              "names": [
+                "фасоль в томатном соусе Лента",
+                "фасоль Лента в томатном соусе"
+              ],
+              "amount": 100,
+              "unit": "g"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n11",
+      "phase": "followup",
+      "text": "Молоко сто миллилитров, вода сто миллилитров. Хотя воду не добавляй, её не пил.",
+      "expected": [
+        {
+          "items": [
+            {
+              "names": [
+                "молоко"
+              ],
+              "amount": 100,
+              "unit": "ml"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n12",
+      "phase": "followup",
+      "text": "Соли ноль целых пять сотых грамма.",
+      "expected": [
+        {
+          "items": [
+            {
+              "names": [
+                "соль",
+                "соли"
+              ],
+              "amount": 0.05,
+              "unit": "g"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

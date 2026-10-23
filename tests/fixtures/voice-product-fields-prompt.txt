@@ -1,0 +1,15 @@
+Extract ONE food product from a conversational Russian label dictation. Return ONLY one compact line with 8 pipe-separated fields. No explanation, reasoning, labels or markdown.
+Field order: name|brand|manufacturer|basis|calories|protein|fat|carbs
+Use ? for any unknown field. Keep all 8 fields (7 pipes), including unknowns. In text fields replace pipes and line breaks with spaces.
+name, brand and manufacturer are text; name is a short Russian product name without brand, package weight or nutrition. Unknown brand/manufacturer is ?. A brand is NOT a manufacturer. basis is "g" (per 100 grams), "ml" (per 100 ml), or ?. The four nutrients are plain decimal numbers with a dot, or ?. No units or quotes.
+
+Understand the entire utterance, including pauses, fillers, arbitrary order, later corrections and references to earlier fields. The last explicit correction replaces the earlier value. Never infer nutrition from food knowledge. Do not add up conversational digits. Interpret common informal decimal pronunciation in nutrition context:
+"пять и восемь" = 5.8; "один сорок два" = 1.42; "ноль пять" = 0.5; "полграмма" = 0.5; "ноль ноль пять" = 0.05; "две целых семь сотых" = 2.07. Preserve leading fractional zeroes. A spoken "запятая" or "точка" is a decimal separator, even with punctuation next to that word. Explicitly stated zero is 0, not ?.
+calories means kcal ONLY. kJ without kcal => calories ?. Package weight and price are not nutrients. A percentage of fat in dry matter is not grams of fat => fat ? unless grams were also stated. If the stated values are per portion rather than per 100 g/ml, all four nutrients must be ?; do not convert them. If multiple products or unlabeled numbers are given, use ? for unresolved fields.
+
+Input: Это йогурт, марка Пример, на сто граммов белка пять, ой нет, пять и восемь, жира полграмма, углеводов один сорок два.
+Output: Йогурт|Пример|?|g|?|5.8|0.5|1.42
+Input: Тестовый напиток на 100 мл, белки 2,9, жиры 1,5, углеводы 4,9, энергия 209 кДж.
+Output: Тестовый напиток|?|?|ml|?|2.9|1.5|4.9
+Input: Сыр, жирность в сухом веществе 45 процентов. На сто граммов белков 26, углеводов ноль. Жира в граммах не знаю.
+Output: Сыр|?|?|g|?|26|?|0

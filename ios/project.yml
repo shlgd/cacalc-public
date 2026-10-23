@@ -1,0 +1,208 @@
+name: Cacalc
+options:
+  bundleIdPrefix: local.cacalc
+  deploymentTarget:
+    iOS: '26.0'
+settings:
+  base:
+    SWIFT_VERSION: '6.0'
+    TARGETED_DEVICE_FAMILY: '1'
+    DEVELOPMENT_TEAM: ''
+packages:
+  SwiftTransformers:
+    url: https://github.com/huggingface/swift-transformers.git
+    exactVersion: 1.1.9
+  FluidAudio:
+    url: https://github.com/FluidInference/FluidAudio.git
+    exactVersion: 0.15.6
+  MLXSwiftLM:
+    url: https://github.com/ml-explore/mlx-swift-lm.git
+    exactVersion: 2.29.3
+targets:
+  Cacalc:
+    type: application
+    platform: iOS
+    sources:
+      - path: Cacalc
+      - path: RecordingShared
+      - path: ../data/search-e5/FoodEmbedding.mlpackage
+        buildPhase: sources
+      - path: ../data/search-e5/FoodSearch
+        type: folder
+        buildPhase: resources
+      - path: Resources
+        buildPhase: resources
+    entitlements:
+      path: Cacalc/Cacalc.entitlements
+      properties:
+        com.apple.developer.healthkit: true
+        keychain-access-groups:
+          - $(AppIdentifierPrefix)local.cacalc.app
+          - $(AppIdentifierPrefix)local.cacalc.nutrition
+    info:
+      path: Cacalc/Info.plist
+      properties:
+        CFBundleVersion: '$(CURRENT_PROJECT_VERSION)'
+        CFBundleShortVersionString: '$(MARKETING_VERSION)'
+        NSHealthShareUsageDescription: Сон помогает подстроить время еды. Активность, тренировки, пульс и показатели тела сохраняются локально для анализа питания и нагрузки. Запись в Здоровье не выполняется.
+        NSSupportsLiveActivities: true
+        NutritionWidgetKeychainGroup: $(AppIdentifierPrefix)local.cacalc.nutrition
+        CFBundleURLTypes:
+          - CFBundleURLSchemes: [cacalc]
+        UIBackgroundModes: [audio]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: local.cacalc.app
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: cacalc
+        INFOPLIST_KEY_NSCameraUsageDescription: Сканирование штрихкода для поиска продукта в локальном каталоге.
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_CADisableMinimumFrameDurationOnPhone: YES
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
+        INFOPLIST_KEY_NSMicrophoneUsageDescription: Диктовка еды и карточек продуктов. Аудио распознаётся на iPhone; текст еды отправляется в Polza для разбора.
+        MARKETING_VERSION: '1.0'
+        CURRENT_PROJECT_VERSION: '367'
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+    dependencies:
+      - target: RecordingActivity
+        embed: true
+      - sdk: libsqlite3.tbd
+      - package: SwiftTransformers
+        product: Tokenizers
+      - package: FluidAudio
+      - package: MLXSwiftLM
+        product: MLXLLM
+      - package: MLXSwiftLM
+        product: MLXLMCommon
+  RecordingActivity:
+    type: app-extension
+    platform: iOS
+    sources: [RecordingActivity, RecordingShared]
+    entitlements:
+      path: RecordingActivity/RecordingActivity.entitlements
+      properties:
+        keychain-access-groups:
+          - $(AppIdentifierPrefix)local.cacalc.app.recording
+          - $(AppIdentifierPrefix)local.cacalc.nutrition
+    info:
+      path: RecordingActivity/Info.plist
+      properties:
+        CFBundleVersion: '$(CURRENT_PROJECT_VERSION)'
+        CFBundleShortVersionString: '$(MARKETING_VERSION)'
+        CFBundleDisplayName: Диктовка
+        NutritionWidgetKeychainGroup: $(AppIdentifierPrefix)local.cacalc.nutrition
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: local.cacalc.app.recording
+        MARKETING_VERSION: '1.0'
+        CURRENT_PROJECT_VERSION: '367'
+        SWIFT_ACTIVE_COMPILATION_CONDITIONS: '$(inherited) RECORDING_WIDGET'
+        APPLICATION_EXTENSION_API_ONLY: YES
+        SKIP_INSTALL: YES
+  CacalcTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [CacalcTests]
+    dependencies: [{target: Cacalc}]
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+  CacalcUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: [CacalcUITests]
+    dependencies: [{target: Cacalc}]
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+  CacalcStreamingBench:
+    type: tool
+    platform: macOS
+    deploymentTarget: '14.0'
+    sources:
+      - path: ../tools/StreamingBench
+      - path: Cacalc/LiveMealParser.swift
+      - path: Cacalc/RussianLabelParser.swift
+      - path: Cacalc/Domain.swift
+      - path: Cacalc/MealDomain.swift
+      - path: Cacalc/HealthInsights.swift
+      - path: Cacalc/ProductSearch.swift
+      - path: Cacalc/ProductCreation.swift
+    dependencies:
+      - package: FluidAudio
+    settings:
+      base:
+        ARCHS: arm64
+        CODE_SIGNING_ALLOWED: NO
+  CacalcModelBench:
+    type: tool
+    platform: macOS
+    deploymentTarget: '14.0'
+    sources:
+      - path: ../tools/ModelBench
+      - path: Cacalc/Domain.swift
+      - path: Cacalc/MealDomain.swift
+      - path: Cacalc/HealthInsights.swift
+      - path: Cacalc/ProductSearch.swift
+      - path: Cacalc/ProductCreation.swift
+      - path: Cacalc/LiveMealParser.swift
+      - path: Cacalc/LiveAudioBuffer.swift
+      - path: Cacalc/RussianLabelParser.swift
+      - path: Cacalc/ProcessMemory.swift
+      - path: Cacalc/VoiceEngine.swift
+      - path: Cacalc/VoiceAssets.swift
+      - path: Cacalc/VoicePromptCache.swift
+      - path: Cacalc/VoiceLanguageModel.swift
+    resources:
+      - path: Resources/voice-models.json
+      - path: Resources/product-extraction-prompt.txt
+    dependencies:
+      - package: FluidAudio
+      - package: MLXSwiftLM
+        product: MLXLLM
+      - package: MLXSwiftLM
+        product: MLXLMCommon
+    settings:
+      base:
+        ARCHS: arm64
+        CODE_SIGNING_ALLOWED: NO
+  CacalcVoiceBench:
+    type: tool
+    platform: macOS
+    deploymentTarget: '14.0'
+    sources:
+      - path: ../tools/VoiceBench
+      - path: Cacalc/Domain.swift
+      - path: Cacalc/MealDomain.swift
+      - path: Cacalc/HealthInsights.swift
+      - path: Cacalc/ProductSearch.swift
+      - path: Cacalc/ProductCreation.swift
+      - path: Cacalc/VoicePromptCache.swift
+      - path: Cacalc/VoiceLanguageModel.swift
+    dependencies:
+      - package: MLXSwiftLM
+        product: MLXLLM
+      - package: MLXSwiftLM
+        product: MLXLMCommon
+    settings:
+      base:
+        ARCHS: arm64
+        CODE_SIGNING_ALLOWED: NO
+schemes:
+  Cacalc:
+    build:
+      targets:
+        Cacalc: all
+    test:
+      targets: [CacalcTests, CacalcUITests]
+  CacalcVoiceBench:
+    build:
+      targets:
+        CacalcVoiceBench: all
+  CacalcStreamingBench:
+    build:
+      targets:
+        CacalcStreamingBench: all

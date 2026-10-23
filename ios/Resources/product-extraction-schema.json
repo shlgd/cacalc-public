@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ProductExtraction",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["name"],
+  "properties": {
+    "name": {"type": "string", "maxLength": 200},
+    "brand": {"type": ["string", "null"], "maxLength": 200},
+    "manufacturer": {"type": ["string", "null"], "maxLength": 300},
+    "basis": {"enum": ["g", "ml", null]},
+    "calories": {"type": ["number", "null"], "minimum": 0, "maximum": 1000000},
+    "protein": {"type": ["number", "null"], "minimum": 0, "maximum": 1000000},
+    "fat": {"type": ["number", "null"], "minimum": 0, "maximum": 1000000},
+    "carbs": {"type": ["number", "null"], "minimum": 0, "maximum": 1000000}
+  }
+}

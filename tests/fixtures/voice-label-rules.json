@@ -1,0 +1,393 @@
+{
+  "description": "Синтетические фразы для ограниченной грамматики этикеток. Не данные пищевого каталога и не оценка всей русской речи.",
+  "cases": [
+    {
+      "id": "explicit_identity",
+      "text": "Название тунец в собственном соку. Марка Лента. На сто граммов белка двадцать четыре, жира один, углеводов ноль, калорий сто пять.",
+      "expected": {
+        "name": "тунец в собственном соку",
+        "brand": "Лента",
+        "protein": "24",
+        "fat": "1",
+        "carbs": "0",
+        "calories": "105",
+        "basis": "g"
+      }
+    },
+    {
+      "id": "labels_before",
+      "text": "Белков 5.8, жиров 0,05, углеводов 1.42, калорий 48.",
+      "expected": {
+        "protein": "5.8",
+        "fat": "0.05",
+        "carbs": "1.42",
+        "calories": "48"
+      }
+    },
+    {
+      "id": "labels_after",
+      "text": "5.8 грамма белка, 0,05 грамма жира, 1.42 грамма углеводов, 48 килокалорий.",
+      "expected": {
+        "protein": "5.8",
+        "fat": "0.05",
+        "carbs": "1.42",
+        "calories": "48"
+      }
+    },
+    {
+      "id": "all_reverse_words",
+      "text": "пять запятая восемь белков ноль точка ноль пять жиров один сорок два углеводов сорок восемь калорий",
+      "expected": {
+        "protein": "5.8",
+        "fat": "0.05",
+        "carbs": "1.42",
+        "calories": "48"
+      }
+    },
+    {
+      "id": "mixed_direction",
+      "text": "Белки 5, 0.5 грамм жиров, углеводов 4, 50 ккал.",
+      "expected": {
+        "protein": "5",
+        "fat": "0.5",
+        "carbs": "4",
+        "calories": "50"
+      }
+    },
+    {
+      "id": "feminine_hundredths",
+      "text": "Белка одна целая восемь сотых. Жира две целых пять тысячных. Углеводов три десятых.",
+      "expected": {
+        "protein": "1.08",
+        "fat": "2.005",
+        "carbs": "0.3"
+      }
+    },
+    {
+      "id": "half",
+      "text": "Белка полтора, жира полграмма, углеводов два с половиной.",
+      "expected": {
+        "protein": "1.5",
+        "fat": "0.5",
+        "carbs": "2.5"
+      }
+    },
+    {
+      "id": "zero_strings",
+      "text": "Белки ноль точка ноль ноль пять. Жиры 0,0005. Углеводы ноль.",
+      "expected": {
+        "protein": "0.005",
+        "fat": "0.0005",
+        "carbs": "0"
+      }
+    },
+    {
+      "id": "correction_short",
+      "text": "Белка 5, нет, 5.8. Жира 0.5. Углеводов 3.",
+      "expected": {
+        "protein": "5.8",
+        "fat": "0.5",
+        "carbs": "3"
+      }
+    },
+    {
+      "id": "correction_negated",
+      "text": "Белков не восемь, а девять и четыре. Жира один.",
+      "expected": {
+        "protein": "9.4",
+        "fat": "1"
+      }
+    },
+    {
+      "id": "conflicting_repeats",
+      "text": "Белки 5. Белки 8. Жиры 1.",
+      "expected": {
+        "protein": null,
+        "fat": "1"
+      }
+    },
+    {
+      "id": "matching_repeats",
+      "text": "Белки 5. Белков пять. Жиры 1.",
+      "expected": {
+        "protein": "5",
+        "fat": "1"
+      }
+    },
+    {
+      "id": "unlabelled",
+      "text": "Продукт пример. 20, 5, 3.",
+      "expected": {
+        "protein": null,
+        "fat": null,
+        "carbs": null,
+        "calories": null
+      }
+    },
+    {
+      "id": "negative",
+      "text": "Белки минус пять, жиры -2, углеводы 3.",
+      "expected": {
+        "protein": null,
+        "fat": null,
+        "carbs": "3"
+      }
+    },
+    {
+      "id": "invalid_decimal",
+      "text": "Белки 1.2.3, жиры 1, углеводы 4.",
+      "expected": {
+        "protein": null,
+        "fat": "1",
+        "carbs": "4"
+      }
+    },
+    {
+      "id": "price_weight",
+      "text": "Пачка 200 грамм, 142 рубля. Белков 8, жира 2, углеводов 45.",
+      "expected": {
+        "protein": "8",
+        "fat": "2",
+        "carbs": "45",
+        "calories": null
+      }
+    },
+    {
+      "id": "only_kj",
+      "text": "На сто граммов энергия 209 кДж. Белков три, жиров один, углеводов четыре.",
+      "expected": {
+        "protein": "3",
+        "fat": "1",
+        "carbs": "4",
+        "calories": null
+      }
+    },
+    {
+      "id": "wrong_energy_unit",
+      "text": "Калории 209 килоджоулей, белки 3.",
+      "expected": {
+        "calories": null,
+        "protein": "3"
+      }
+    },
+    {
+      "id": "kcal_and_kj",
+      "text": "Энергия 209 кДж, 50 ккал. Белки 3.",
+      "expected": {
+        "calories": "50",
+        "protein": "3"
+      }
+    },
+    {
+      "id": "dry_fat_only",
+      "text": "Жира в сухом веществе 45 процентов. Белков 26, углеводов 0.",
+      "expected": {
+        "fat": null,
+        "protein": "26",
+        "carbs": "0"
+      }
+    },
+    {
+      "id": "percent_not_grams",
+      "text": "Жирность 45%. Белки 26.",
+      "expected": {
+        "fat": null,
+        "protein": "26"
+      }
+    },
+    {
+      "id": "portion",
+      "text": "На порцию 150 грамм: белки 8, жиры 6, углеводы 20, 166 ккал.",
+      "expected": {
+        "protein": null,
+        "fat": null,
+        "carbs": null,
+        "calories": null
+      }
+    },
+    {
+      "id": "other_basis",
+      "text": "На 200 граммов белки 8, жиры 2, углеводы 1.",
+      "expected": {
+        "protein": null,
+        "fat": null,
+        "carbs": null
+      }
+    },
+    {
+      "id": "conflicting_basis",
+      "text": "На 100 граммов белки 8. На 100 мл жиры 2.",
+      "expected": {
+        "protein": null,
+        "fat": null,
+        "basis": null
+      }
+    },
+    {
+      "id": "two_products",
+      "text": "Название сыр. Белки 25. Второй продукт молоко. Белки 3.",
+      "expected": {
+        "protein": null,
+        "fat": null,
+        "calories": null
+      }
+    },
+    {
+      "id": "missing_is_not_zero",
+      "text": "Белки не знаю, жиры не помню, углеводов ноль.",
+      "expected": {
+        "protein": null,
+        "fat": null,
+        "carbs": "0"
+      }
+    },
+    {
+      "id": "comma_word_pause",
+      "text": "5 запятая, 8 грамм белков, 0 запятая,5 грамм жиров.",
+      "expected": {
+        "protein": "5.8",
+        "fat": "0.5"
+      }
+    },
+    {
+      "id": "milligrams",
+      "text": "Белки 500 миллиграмм, жиры 2.",
+      "expected": {
+        "protein": null,
+        "fat": "2"
+      }
+    },
+    {
+      "id": "no_punctuation_forward",
+      "text": "белки пять жиры два углеводы три калории сорок",
+      "expected": {
+        "protein": "5",
+        "fat": "2",
+        "carbs": "3",
+        "calories": "40"
+      }
+    },
+    {
+      "id": "no_punctuation_reverse",
+      "text": "пять белков два жиров три углеводов сорок калорий",
+      "expected": {
+        "protein": "5",
+        "fat": "2",
+        "carbs": "3",
+        "calories": "40"
+      }
+    },
+    {
+      "id": "long_decimal",
+      "text": "Белки 0.123456789123456789, жиры ноль.",
+      "expected": {
+        "protein": "0.123456789123456789",
+        "fat": "0"
+      }
+    },
+    {
+      "id": "weight_without_punctuation",
+      "text": "Пачка 200 грамм белков 8 жиров 2 углеводов 45",
+      "expected": {
+        "protein": "8",
+        "fat": "2",
+        "carbs": "45"
+      }
+    },
+    {
+      "id": "sugar_not_carbs",
+      "text": "Сахара 5 углеводов 20 жиров 2",
+      "expected": {
+        "carbs": "20",
+        "fat": "2"
+      }
+    },
+    {
+      "id": "range",
+      "text": "Белков от 2 до 5. Жиры 1.",
+      "expected": {
+        "protein": null,
+        "fat": "1"
+      }
+    },
+    {
+      "id": "range_without_from",
+      "text": "Белков 2 до 5. Жиры 1.",
+      "expected": {
+        "protein": null,
+        "fat": "1"
+      }
+    },
+    {
+      "id": "negated_only",
+      "text": "Белков не пять. Жиры 1.",
+      "expected": {
+        "protein": null,
+        "fat": "1"
+      }
+    },
+    {
+      "id": "unit_correction",
+      "text": "Белков 5 грамм, нет, 5.8. Жиры 1.",
+      "expected": {
+        "protein": "5.8",
+        "fat": "1"
+      }
+    },
+    {
+      "id": "missing_leading_zero",
+      "text": "Белки .5. Жиры 1.",
+      "expected": {
+        "protein": null,
+        "fat": "1"
+      }
+    },
+    {
+      "id": "scientific_notation",
+      "text": "Белки 1e3. Жиры 1.",
+      "expected": {
+        "protein": null,
+        "fat": "1"
+      }
+    },
+    {
+      "id": "thousands",
+      "text": "Калорий одна тысяча двести сорок два.",
+      "expected": {
+        "calories": "1242"
+      }
+    },
+    {
+      "id": "outside_limits",
+      "text": "Калорий два миллиона.",
+      "expected": {
+        "calories": null
+      }
+    },
+    {
+      "id": "no_unit_conversion",
+      "text": "Белков 5 мл. Калорий 2 грамма.",
+      "expected": {
+        "protein": null,
+        "calories": null
+      }
+    },
+    {
+      "id": "real_number_not_from_previous_sentence",
+      "text": "Вес 200 грамм. 5 белков, 2 жиров.",
+      "expected": {
+        "protein": "5",
+        "fat": "2"
+      }
+    },
+    {
+      "id": "field_only_filler_title",
+      "text": "По белку тут получается пять. Жиров один.",
+      "expected": {
+        "name": null,
+        "protein": "5",
+        "fat": "1"
+      }
+    }
+  ]
+}

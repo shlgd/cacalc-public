@@ -1,0 +1,18 @@
+{
+  "source": "Norwegian Food Safety Authority — Matvaretabellen",
+  "license": "NLOD",
+  "scope": "Curated basic foods with Russian names",
+  "schema_version": 2,
+  "snapshot_date": "2026-09-14",
+  "rows": 474,
+  "source_rows": 2121,
+  "inputs": [
+    {
+      "url": "https://www.matvaretabellen.no/api/en/foods.json",
+      "sha256": "89b8f5f494a79731bf7d8d98065ee66c55263ccdbb519e7c87941218be6c948d"
+    }
+  ],
+  "translation": "Russian names curated in cacalc; original names and nutrition retained",
+  "carbohydrate_definition": "available carbohydrate; fibre separate",
+  "sha256": "f3041852973c647bb9bbaa662d3a4a98b0a6e68189ac62b9169abc8cfd99d8df"
+}

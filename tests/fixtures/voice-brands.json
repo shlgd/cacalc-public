@@ -1,0 +1,90 @@
+{
+  "description": "Synthetic brand-separation examples. Nutrition numbers are invented fixtures, not real product values.",
+  "cases": [
+    {
+      "id": "tuna_brand_plain",
+      "split": "brand-regression",
+      "text": "Тунец Лента в собственном соку. На сто граммов белки двадцать три, жиры полтора, углеводы ноль, калории сто десять.",
+      "expected": {
+        "brand": "Лента",
+        "protein": "23",
+        "fat": "1.5",
+        "carbs": "0",
+        "calories": "110",
+        "basis": "g"
+      },
+      "name_excludes_brand": true
+    },
+    {
+      "id": "tuna_brand_explicit",
+      "split": "brand-regression",
+      "text": "Так, это тунец, марка Лента, консервированный в собственном соку. Белка на сто граммов двадцать четыре, жира один, углеводов нет, калорий сто пять.",
+      "expected": {
+        "brand": "Лента",
+        "protein": "24",
+        "fat": "1",
+        "carbs": "0",
+        "calories": "105",
+        "basis": "g"
+      },
+      "name_excludes_brand": true
+    },
+    {
+      "id": "store_not_brand",
+      "split": "brand-regression",
+      "text": "Купил в Ленте тунец в собственном соку. Марку не помню. На 100 грамм белка 23, жира 1, углеводов 0.",
+      "expected": {
+        "brand": null,
+        "protein": "23",
+        "fat": "1",
+        "carbs": "0",
+        "calories": null,
+        "basis": "g"
+      },
+      "name_excludes_brand": true
+    },
+    {
+      "id": "brand_separate_from_store",
+      "split": "brand-regression",
+      "text": "Купил в Ленте молоко Простоквашино. На сто миллилитров белки 2,9, жиры 1,5, углеводы 4,9, калории 45.",
+      "expected": {
+        "brand": "Простоквашино",
+        "protein": "2.9",
+        "fat": "1.5",
+        "carbs": "4.9",
+        "calories": "45",
+        "basis": "ml"
+      },
+      "name_excludes_brand": true
+    },
+    {
+      "id": "multiword_brand",
+      "split": "brand-regression",
+      "text": "Хлеб зерновой, марка Северный Берег. На сто грамм белков восемь и два, жиров три, углеводов сорок два, калорий двести тридцать.",
+      "expected": {
+        "brand": "Северный Берег",
+        "protein": "8.2",
+        "fat": "3",
+        "carbs": "42",
+        "calories": "230",
+        "basis": "g"
+      },
+      "name_excludes_brand": true
+    },
+    {
+      "id": "manufacturer_separate",
+      "split": "brand-regression",
+      "text": "Сыр полутвёрдый, марка Зелёный Луг, производитель компания Сырный Дом. На сто граммов белка 25, жира 30, углеводов 0.",
+      "expected": {
+        "brand": "Зелёный Луг",
+        "manufacturer": "Сырный Дом",
+        "protein": "25",
+        "fat": "30",
+        "carbs": "0",
+        "calories": null,
+        "basis": "g"
+      },
+      "name_excludes_brand": true
+    }
+  ]
+}
